@@ -1,0 +1,4 @@
+<a routerLink="/{{name}}">
+  <img [class]="imgClassName" [ngClass]="{focus: imgFocusBool}"
+  [src]="imgSrc" aria-label="name" alt="name" (mouseover)="hover($event)" (mouseout)="noHover($event)">
+</a>

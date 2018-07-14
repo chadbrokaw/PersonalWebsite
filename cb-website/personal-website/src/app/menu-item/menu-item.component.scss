@@ -1,0 +1,40 @@
+.focus {
+  //transform: scale(1.07);
+  transition: .25s ease-in-out;
+}
+
+.noFocus {
+  transition: 2s ease-in-out;
+}
+.HomeIcon {
+  width: 60px;
+  height: 60px;
+}
+.AboutMeIcon {
+  width: 60px;
+  height: 35px;
+}
+.CodeIcon {
+  width: 60px;
+  height: 35px;
+}
+.ExperienceIcon {
+  width: 55px;
+  height: 45px;
+}
+.SkillsIcon {
+  width: 55px;
+  height: 55px;
+}
+.EducationIcon {
+  width: 60px;
+  height: 30px;
+}
+.ResumeIcon {
+  width: 50px;
+  height: 60px;
+}
+.ContactIcon {
+  width: 50px;
+  height: 40px;
+}

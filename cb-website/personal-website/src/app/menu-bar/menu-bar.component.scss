@@ -1,0 +1,101 @@
+.welcomeScreen {
+  display: flex;
+  .container {
+    display: flex;
+    width: 19%;
+    height: 100%;
+    margin: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .imageContainer {
+      flex: 1 1 auto;
+      margin: 3.5vh;
+    }
+  }
+}
+
+.obscureScreen{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.HomeIcon {
+  padding-top: 6vh;
+  width: 60px;
+  height: 60px;
+}
+.AboutMeIcon {
+  width: 60px;
+  height: 35px;
+}
+.CodeIcon {
+  width: 60px;
+  height: 35px;
+}
+.ExperienceIcon {
+  width: 55px;
+  height: 45px;
+}
+.SkillsIcon {
+  width: 55px;
+  height: 55px;
+}
+.EducationIcon {
+  width: 60px;
+  height: 30px;
+}
+.ResumeIcon {
+  width: 50px;
+  height: 60px;
+}
+.ContactIcon {
+  width: 50px;
+  height: 40px;
+}
+
+.buttonContainer {
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  margin: 5%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.navContainer {
+  display: flex;
+  z-index: 2;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+}
+
+#navButton {
+  margin: .6em 0 .6em 0;
+}
+
+#mainButton {
+  margin-top: .5em;
+}
+
+.mobileButtonsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-success {
+    background-color: hsla(285, 100%, 51%, 1);
+    color: #fff;
+}
+.mat-white {
+    background-color: white;
+    color: black;
+}

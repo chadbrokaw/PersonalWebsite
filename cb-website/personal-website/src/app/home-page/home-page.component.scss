@@ -1,0 +1,52 @@
+.headerZone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  h1 {
+    font-family: helvetica neue;
+    font-weight: 100;
+    font-size: 7em;
+  }
+  #personalLogo {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+    .headerZone h1 {
+        font-size: 6em;
+    }
+}
+
+@media only screen and (max-width: 1275px) {
+    .headerZone h1 {
+        font-size: 5em;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    .headerZone h1 {
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 875px) {
+    .headerZone h1 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .headerZone h1 {
+        font-size: 6em;
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    .headerZone h1 {
+        font-size: 4.5em;
+    }
+}
