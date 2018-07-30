@@ -1,10 +1,9 @@
 import { Component, OnInit,
   HostListener }                from '@angular/core';
-import { MatButtonModule }      from '@angular/material';
 import { trigger, state, style,
   animate, transition, query,
   stagger}                      from '@angular/animations';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -49,8 +48,9 @@ export class MenuBarComponent implements OnInit {
   testNum: number = 4.5
   iconMargin: number = undefined;
   icons: string[] = ["home","person","work","build","school","mail"]
+  imgSelected: string = undefined;
 
-  constructor( private router: Router, private route: ActivatedRoute ) { }
+  constructor( private router: Router ) { }
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;
@@ -60,6 +60,7 @@ export class MenuBarComponent implements OnInit {
     this.handleScreenSize(this.screenWidth);
   }
 
+
   @HostListener('window:resize', ['$event'])
     onResize(event) {
       this.screenWidth = window.innerWidth;
@@ -67,7 +68,6 @@ export class MenuBarComponent implements OnInit {
     }
 
   private handleScreenSize(screenSize: any): void {
-    // console.log(screenSize);
     if ( screenSize < 775 ) {
       this.smallScreen = true;
     }
@@ -86,8 +86,6 @@ export class MenuBarComponent implements OnInit {
       this.icon = "menu";
     }
   }
-
-  //icons: string[] = ["home","person","work","build","school","mail"]
 
   public navButtonClicked(icon: string): void {
     if ( icon === "home") {

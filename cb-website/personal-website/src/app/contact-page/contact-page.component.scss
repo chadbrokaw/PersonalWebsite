@@ -1,0 +1,125 @@
+.mainText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  h1 {
+    font-family: "helvetica neue", sans-serif;
+    font-weight: 100;
+    font-size: 4em;
+  }
+  .images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .placeholder {
+      width: 0px;
+      height: 0px;
+      background: white;
+    }
+
+    .item {
+      width: 150px;
+      height: 150px;
+      background: #205D7A;
+      border-radius: 75px;
+      margin: 5%;
+      box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, .5);
+      transition: all 0.2s ease-in-out;
+      i {
+        color: #fff;
+        font-size: 50px;
+        padding:32%;
+      }
+      a {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .item:hover {
+      box-shadow: none;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  #facebook {
+    background: #3b5998;
+  }
+  #linkedin {
+    background: #007bb6;
+  }
+  #twitter {
+    background: #00aced;
+  }
+  #email {
+    background: #02b6b6;
+  }
+  .mat-black {
+      color: black;
+      font-size: 114px;
+  }
+}
+
+@media only screen and (max-width: 1335px) {
+  .mainText h1 {
+    margin-bottom: 1em;
+  }
+  .mainText .images .item {
+    margin: 3%;
+  }
+}
+
+@media only screen and (min-width: 775px) {
+  .mainText h1 {
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mainText h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+  .mainText .images .item {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+  .mainText .images .item i {
+    padding: 25%;
+  }
+}
+
+@media only screen and (max-width: 1055px) {
+  .mainText h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+  .mainText .images .item {
+    width: 125px;
+    height: 125px;
+    border-radius: 62.5px;
+  }
+  .mainText .images .item i {
+    padding: 28.5%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .mainText .images .placeholder {
+    flex-basis: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 335px) {
+  .mainText h1 {
+    margin-bottom: .5em;
+    padding-top: 1em;
+    font-size: 2em;
+  }
+}

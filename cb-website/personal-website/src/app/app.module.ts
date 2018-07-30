@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatIconModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 
 import { AppComponent } from './app.component';
@@ -36,7 +37,25 @@ import { EmitMyNameService } from './services/emit-my-name/emit-my-name.service'
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgCircleProgressModule.forRoot({
+      radius: 88,
+      space: -5,
+      toFixed: 0,
+      unitsColor: "#000000",
+      outerStrokeWidth: 5,
+      outerStrokeColor: "#292a2b",
+      outerStrokeLinecap: "round",
+      innerStrokeColor: "#339fff",
+      innerStrokeWidth: 5,
+      title: "3.88 GPA",
+      titleColor: "#292a2b",
+      titleFontSize: "35",
+      animateTitle: false,
+      animationDuration: 1000,
+      showSubtitle: false,
+      showUnits: false
+    })
   ],
   providers: [EmitMyNameService],
   bootstrap: [AppComponent]

@@ -1,4 +1,8 @@
 <div class=container>
   <div class="menuBar"><menu-bar></menu-bar></div>
-  <router-outlet></router-outlet>
+  <main>
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
 </div>
+
+<!-- [@routerTransition]="getState(o)" -->

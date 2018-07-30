@@ -1,3 +1,6 @@
+html {
+  overflow: hidden;
+}
 .headerZone {
   position: absolute;
   top: 50%;
@@ -6,12 +9,20 @@
   transform: translate(-50%, -50%);
   text-align: center;
   h1 {
-    font-family: helvetica neue;
+    font-family: "helvetica neue";
     font-weight: 100;
     font-size: 7em;
+    padding-bottom: 1em;
   }
-  #personalLogo {
-    width: 50px;
+  h3 {
+    font-family: "helvetica neue";
+    font-weight: 100;
+    font-size: 3em;
+  }
+  h2 {
+    font-family: "helvetica neue";
+    font-weight: 100;
+    font-size: 4em;
   }
 }
 
@@ -19,11 +30,23 @@
     .headerZone h1 {
         font-size: 6em;
     }
+    .headerZone h3 {
+        font-size: 3em;
+    }
+    .headerZone h2 {
+        font-size: 4em;
+    }
 }
 
 @media only screen and (max-width: 1275px) {
     .headerZone h1 {
         font-size: 5em;
+    }
+    .headerZone h3 {
+        font-size: 2.5em;
+    }
+    .headerZone h2 {
+        font-size: 3em;
     }
 }
 
@@ -31,11 +54,23 @@
     .headerZone h1 {
         font-size: 4em;
     }
+    .headerZone h3 {
+        font-size: 2em;
+    }
+    .headerZone h2 {
+        font-size: 3em;
+    }
 }
 
 @media only screen and (max-width: 875px) {
     .headerZone h1 {
         font-size: 3em;
+    }
+    .headerZone h3 {
+        font-size: 1.5em;
+    }
+    .headerZone h2 {
+        font-size: 2.5em;
     }
 }
 
@@ -43,10 +78,34 @@
     .headerZone h1 {
         font-size: 6em;
     }
+    .headerZone h3 {
+        font-size: 3em;
+    }
+    .headerZone h2 {
+        font-size: 4em;
+    }
 }
 
 @media only screen and (max-width: 515px) {
     .headerZone h1 {
         font-size: 4.5em;
+    }
+    .headerZone h3 {
+        font-size: 2.25em;
+    }
+    .headerZone h2 {
+        font-size: 3.25em;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .headerZone h1 {
+        font-size: 3em;
+    }
+    .headerZone h3 {
+        font-size: 1.5em;
+    }
+    .headerZone h2 {
+        font-size: 2.25em;
     }
 }

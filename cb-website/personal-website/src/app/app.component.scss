@@ -1,6 +1,17 @@
 .container {
   display: flex;
+  height: 100%;
   .menuBar {
     width: 12%;
   }
 }
+
+body, html {
+  height: 100%;
+}
+
+// .container {
+//   .menuBar {
+//     position: absolute;
+//   }
+// }

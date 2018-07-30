@@ -1,3 +1,40 @@
-<p>
-  education-page works!
-</p>
+<ng-container [@fadeOut]>
+<div class="gpaContainer">
+  <circle-progress
+    [percent]="95"
+    [radius] = "gpaRadius"
+    [space] = "-7"
+    [toFixed] = "0"
+    [unitsColor] = "'#2d8fe5'"
+    [outerStrokeWidth] = "10"
+    [outerStrokeLinecap] = "'round'"
+    [innerStrokeColor] = "'#339fff'"
+    [innerStrokeWidth] = "4"
+    [title] = "'3.9'"
+    [titleColor] = "'#292a2b'"
+    [titleFontSize] = "fontSize"
+    [animateTitle] = "false"
+    [animationDuration] = "1000"
+    [showSubtitle] = "false"
+    [showUnits] = "true"
+    [animation] = "true"
+    [units] = "'GPA'"
+  ></circle-progress>
+  <div class="awardContainer">
+    <div [@flyInOut]="in" id="Esteemed">
+      Esteemed Scholar
+    </div>
+    <div [@flyInOut]="in" id="DeanList">
+      Dean's <br> List
+    </div>
+  </div>
+</div>
+
+<div class="classList" [@fadeIn]="classes.length">
+  <div *ngFor="let eduClass of classes" class="specificClass">
+    <span class="grade" *ngIf="eduClass.Completed">{{ eduClass.Grade }}</span>
+    <span class="inP" *ngIf="!eduClass.Completed">...</span>
+    <span class="text">{{eduClass.Name}}</span>
+  </div>
+</div>
+</ng-container>

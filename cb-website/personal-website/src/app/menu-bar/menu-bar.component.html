@@ -1,26 +1,15 @@
-<!-- <div class="container">
-    <img class="HomeIcon imageContainer" id="Home" src="../assets/Home-Normal.png" alt="Home" aria-label="Home" (mouseover)="highlightIcon('Home')" (mouseout)="noHightlightIcon('Home')">
-    <img class="AboutMeIcon imageContainer" id="AboutMe" src="../assets/AboutMe-Normal.png" alt="About me" aria-label="About Me">
-    <img class="CodeIcon imageContainer" id="Code" src="../assets/Code-Normal.png" alt="Code" aria-label="Code">
-    <img class="WorkIcon imageContainer" id="Work" src="../assets/Work-Normal.png" alt="Normal" aria-label="Normal">
-    <img class="SkillsIcon imageContainer" id="Skills" src="../assets/Skills-Normal.png" alt="Skills" aria-label="Skills">
-    <img class="EducationIcon imageContainer" id="Education" src="../assets/Education-Normal.png" alt="Education" aria-label="Education">
-    <img class="ResumeIcon imageContainer" id="Resume" src="../assets/Resume-Normal.png" alt="Resume" aria-label="Resume">
-    <img class="ContactIcon imageContainer" id="Contact" src="../assets/Contact-Normal.png" alt="Contact" aria-label="Contact">
-  </div> -->
-
+<div *ngIf="smallScreen">
   <div [@obscureState]='displayMenu' class="obscureScreen"></div>
+</div>
 
 <div class="welcomeScreen" *ngIf="!smallScreen">
   <div class="container">
-    <app-menu-item class="HomeIcon imageContainer" [name] = "'Home'"></app-menu-item>
-    <app-menu-item class="AboutMeIcon imageContainer" [name] = "'AboutMe'"></app-menu-item>
-    <!-- <app-menu-item class="CodeIcon imageContainer" [name] = "'Code'"></app-menu-item> -->
-    <app-menu-item class="ExperienceIcon imageContainer" [name] = "'Experience'"></app-menu-item>
-    <app-menu-item class="SkillsIcon imageContainer" [name] = "'Skills'"></app-menu-item>
-    <app-menu-item class="EducationIcon imageContainer" [name] = "'Education'"></app-menu-item>
-    <!-- <app-menu-item class="ResumeIcon imageContainer" [name] = "'Resume'"></app-menu-item> -->
-    <app-menu-item class="ContactIcon imageContainer" [name] = "'Contact'"></app-menu-item>
+    <app-menu-item class="HomeIcon imageContainer" [name] = "'Home'" [imgSelected]="imageSelected"></app-menu-item>
+    <app-menu-item class="AboutMeIcon imageContainer" [name] = "'AboutMe'" [imgSelected]="imageSelected"></app-menu-item>
+    <app-menu-item class="ExperienceIcon imageContainer" [name] = "'Experience'" [imgSelected]="imageSelected"></app-menu-item>
+    <app-menu-item class="SkillsIcon imageContainer" [name] = "'Skills'" [imgSelected]="imageSelected"></app-menu-item>
+    <app-menu-item class="EducationIcon imageContainer" [name] = "'Education'" [imgSelected]="imageSelected"></app-menu-item>
+    <app-menu-item class="ContactIcon imageContainer" [name] = "'Contact'" [imgSelected]="imageSelected"></app-menu-item>
   </div>
 </div>
 
