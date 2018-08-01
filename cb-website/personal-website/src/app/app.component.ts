@@ -8,4 +8,8 @@ import { routerTransition } from './router.animations';
   animations: [ routerTransition ]
 })
 export class AppComponent {
+  onActivate(event) {
+    window.scroll(0,0);
+  }
+
 }

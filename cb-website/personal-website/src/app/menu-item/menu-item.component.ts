@@ -10,7 +10,6 @@ import { Router } from '@angular/router'
 export class MenuItemComponent implements OnInit {
 
     @Input() name: string;
-    @Input() imgSelected: string;
     imgSrc: string = undefined;
     imgSrcNormal: string = undefined;
     imgSrcHover: string = undefined;
@@ -26,14 +25,14 @@ export class MenuItemComponent implements OnInit {
 
     ngOnInit() {
       debugger;
-      this.imgSrcNormal = "../assets/" + this.name + "-Normal.png";
-      this.imgSrcHover = "../assets/" + this.name + "-Highlight.png";
-      this.imgSrcSelect = "../assets/" + this.name + "-Select.png";
+      this.imgSrcNormal = "./assets/" + this.name + "-Normal.png";
+      this.imgSrcHover = "./assets/" + this.name + "-Highlight.png";
+      this.imgSrcSelect = "./assets/" + this.name + "-Select.png";
       this.imgClassName = this.name + "Icon";
 
       this.determineSelected();
 
-      if ( this.imgSelected === this.name || this.imgSelectedBool ) {
+      if ( this.imgSelectedBool ) {
         this.imgSrc = this.imgSrcSelect;
       }
       else {
@@ -44,7 +43,7 @@ export class MenuItemComponent implements OnInit {
     determineSelected() {
       this.emitMyName.change.subscribe(name => {
         this.selectedIcon(name);
-      })
+      });
       this.selectedIcon(this.emitMyName.getComponentName());
     }
 

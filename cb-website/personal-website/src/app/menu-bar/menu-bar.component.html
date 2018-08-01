@@ -1,15 +1,15 @@
-<div *ngIf="smallScreen">
-  <div [@obscureState]='displayMenu' class="obscureScreen"></div>
+<div *ngIf="(displayMenu==='menuOpen')">
+  <div [@obscureScreen]="'in'" class="obscureScreen"></div>
 </div>
 
 <div class="welcomeScreen" *ngIf="!smallScreen">
   <div class="container">
-    <app-menu-item class="HomeIcon imageContainer" [name] = "'Home'" [imgSelected]="imageSelected"></app-menu-item>
-    <app-menu-item class="AboutMeIcon imageContainer" [name] = "'AboutMe'" [imgSelected]="imageSelected"></app-menu-item>
-    <app-menu-item class="ExperienceIcon imageContainer" [name] = "'Experience'" [imgSelected]="imageSelected"></app-menu-item>
-    <app-menu-item class="SkillsIcon imageContainer" [name] = "'Skills'" [imgSelected]="imageSelected"></app-menu-item>
-    <app-menu-item class="EducationIcon imageContainer" [name] = "'Education'" [imgSelected]="imageSelected"></app-menu-item>
-    <app-menu-item class="ContactIcon imageContainer" [name] = "'Contact'" [imgSelected]="imageSelected"></app-menu-item>
+    <app-menu-item class="HomeIcon imageContainer" [name] = "'Home'"></app-menu-item>
+    <app-menu-item class="AboutMeIcon imageContainer" [name] = "'AboutMe'"></app-menu-item>
+    <app-menu-item class="ExperienceIcon imageContainer" [name] = "'Experience'"></app-menu-item>
+    <app-menu-item class="SkillsIcon imageContainer" [name] = "'Skills'"></app-menu-item>
+    <app-menu-item class="EducationIcon imageContainer" [name] = "'Education'"></app-menu-item>
+    <app-menu-item class="ContactIcon imageContainer" [name] = "'Contact'"></app-menu-item>
   </div>
 </div>
 

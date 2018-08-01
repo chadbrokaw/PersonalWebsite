@@ -11,15 +11,24 @@ import { Router } from '@angular/router';
   templateUrl: './menu-bar.component.html',
   styleUrls: ['./menu-bar.component.scss'],
   animations: [
-    trigger('obscureState', [
-      state('menuClose', style({
-        backgroundColor: 'hsla(0, 0%, 0%, 0)'
-      })),
-      state('menuOpen', style({
-        backgroundColor: 'hsla(0, 0%, 54%, 0.65)'
-      })),
-      transition('menuClose => menuOpen', animate('600ms ease-in')),
-      transition('menuOpen => menuClose', animate('600ms ease-out'))
+    // trigger('obscureState', [
+    //   state('menuClose', style({
+    //     backgroundColor: 'hsla(0, 0%, 0%, 0)'
+    //   })),
+    //   state('menuOpen', style({
+    //     backgroundColor: 'hsla(0, 0%, 54%, 0.65)'
+    //   })),
+    //   transition('menuClose => menuOpen', animate('600ms ease-in')),
+    //   transition('menuOpen => menuClose', animate('600ms ease-out'))
+    // ]),
+    trigger('obscureScreen', [
+      state('in', style( { opacity: 1 })),
+      transition('void => *', [
+        style({
+          opacity: 0
+        }),
+        animate('1.2s ease-in-out')
+      ])
     ]),
     trigger('fadeIn', [
       transition('* => *', [
@@ -56,7 +65,6 @@ export class MenuBarComponent implements OnInit {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
     this.iconMargin = this.screenHeight/7;
-    console.log(this.screenHeight);
     this.handleScreenSize(this.screenWidth);
   }
 
