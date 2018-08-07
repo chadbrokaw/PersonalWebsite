@@ -1,6 +1,19 @@
 <div class="mainText">
   <h1>Here's what I'm good at</h1>
-  <img id="personalImage" src="./assets/Headshot.JPG" alt="Chad Brokaw">
+  <div class="allSkills" [@fadeIn]="skills.length">
+    <div *ngFor="let skill of skills; let i = index" class = "skill" [ngStyle]="{'margin-right': (i%edgeIndex===(edgeIndex-1) ? '7px' : '8%')}">
+      <div class="skillsRank">
+        <div id="level1" class="skillLevel" [class.highlightSkill]="skill.exp>0"></div>
+        <div id="level2" class="skillLevel" [class.highlightSkill]="skill.exp>1"></div>
+        <div id="level3" class="skillLevel" [class.highlightSkill]="skill.exp>2"></div>
+        <div id="level4" class="skillLevel" [class.highlightSkill]="skill.exp>3"></div>
+      </div>
+      <!--{{i}}-->
+      <!--{{edgeIndex}}-->
+      <!--{{i%edgeIndex}}-->
+      <img class="personalImage" src="./assets/{{skill.image}}" [ngStyle]="{'box-shadow': skill.shadow}" alt="Chad Brokaw">
+    </div>
+  </div>
 </div>
 
 
@@ -8,12 +21,14 @@
 <!--AngularY-->
 <!--JavaSciptY-->
 <!--TypeScriptY-->
-<!--C++-->
+<!--C++Y-->
 <!--HTMLY/CSSY-->
-<!--Agile-->
+<!--DockerY-->
+<!--AgileY-->
 <!--MacOS/iOS-->
 <!--PythonY-->
 <!--Photoshop/Illustrator-->
 <!--Public Speaking-->
 <!--Leadership-->
 <!--</p>-->
+<!--797979-->

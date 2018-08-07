@@ -24,7 +24,6 @@ export class MenuItemComponent implements OnInit {
     }
 
     ngOnInit() {
-      debugger;
       this.imgSrcNormal = "./assets/" + this.name + "-Normal.png";
       this.imgSrcHover = "./assets/" + this.name + "-Highlight.png";
       this.imgSrcSelect = "./assets/" + this.name + "-Select.png";
@@ -56,7 +55,6 @@ export class MenuItemComponent implements OnInit {
         this.imgSelectedBool = false;
         this.imgSrc = this.imgSrcNormal;
       }
-      console.log("here");
     }
 
     hover(e) {

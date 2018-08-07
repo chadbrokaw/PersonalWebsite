@@ -73,7 +73,7 @@ export class MenuBarComponent implements OnInit {
     onResize(event) {
       this.screenWidth = window.innerWidth;
       this.handleScreenSize(this.screenWidth);
-    }
+  }
 
   private handleScreenSize(screenSize: any): void {
     if ( screenSize < 775 ) {

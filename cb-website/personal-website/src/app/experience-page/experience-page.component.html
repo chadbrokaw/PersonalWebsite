@@ -1,3 +1,21 @@
-<p>
-  experience-page works!
-</p>
+<!--<div class="placeholder"></div>-->
+<!--<div data-aos="fade-up"-->
+     <!--data-aos-anchor-placement="center-bottom"-->
+     <!--class="test">-->
+  <!--hello-->
+<!--</div>-->
+
+<div class="mainText">
+  <h1 id="mainHeader">Here's where I've been</h1>
+  <div class="experienceUnit" *ngFor="let experience of experiences">
+    <img src="./assets/{{experience.imageName}}" class="image">
+    <div class="content">
+      <h1 class="header">{{((experience.acronym) ? experience.fullTitle : experience.company)}}</h1>
+      <h3 class="position">{{experience.position}}</h3>
+      <h5 class="duration">{{experience.duration}}</h5>
+      <div class="describeText">
+        {{experience.description}}
+      </div>
+    </div>
+  </div>
+</div>

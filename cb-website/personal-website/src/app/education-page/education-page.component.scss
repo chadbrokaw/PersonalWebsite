@@ -17,8 +17,8 @@
     justify-content: space-between;
   }
   #DeanList {
-    background: #bbbbbb;
-    color: #292a2b;
+    background: #292a2b;
+    color: #eaeaea;
     padding: 10px;
     border-radius: 5px;
     justify-content: center;
@@ -27,8 +27,8 @@
     text-align: center;
   }
   #Esteemed {
-    background: #bbbbbb;
-    color: #292a2b;
+    background: #292a2b;
+    color: #eaeaea;
     padding: 10px;
     border-radius: 5px;
     justify-content: center;
@@ -51,14 +51,14 @@
 
   .specificClass {
     flex: 1;
-    background: white;
+    background: #eaeaea;
     color: #292a2b;
     padding: 15px 10px 15px 10px;
     border-radius: 12.5px;
     justify-content: space-between;
     margin: 3%;
     text-align:right;
-    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, .5);
+    //box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, .5);
     display: flex;
     flex-direction: row;
     height: 4em;
@@ -88,11 +88,6 @@
       color: #339fff;
       //color: #236fb2;
     }
-  }
-}
-@media only screen and (min-width: 390) {
-  .classList .specificClass .text {
-
   }
 }
 

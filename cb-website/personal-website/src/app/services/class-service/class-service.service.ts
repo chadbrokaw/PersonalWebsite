@@ -76,7 +76,7 @@ export class ClassService {
       "Completed" : true
     }
 
-  ]
+  ];
 
   constructor() { }
 
