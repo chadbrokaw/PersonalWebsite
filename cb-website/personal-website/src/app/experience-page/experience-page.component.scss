@@ -1,6 +1,6 @@
 .mainText {
   position: absolute;
-  top: 30%;
+  top: 60%;
   left: 50%;
   width: 85%;
   transform: translate(-50%, -50%);
@@ -94,6 +94,7 @@
 @media only screen and (min-width: 775px) {
   .mainText {
     width: 50%;
+    top: 45%;
     max-width: 450px;
   }
 
