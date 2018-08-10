@@ -17,7 +17,7 @@ export class ExperienceService {
       position : 'Student Software Development Engineer',
       currentlyEmployed : true,
       duration : 'April 2018 - Present',
-      description : 'My team is fully Agile, and we work to build web applications for our scientists in the lab, as well as the general public. I specialize in Angular, with an emphasis in translating AngularJS to Angular 6. After I started I quickly excelled, and within two months I was marked as an experience developer in multiple applications. Using Material Design as a starting point, I helped push for a more cohesive brand and user experience. Finally, I have been a leader in the push to make our web applications more accessible.',
+      description : 'I specialize in front-end web development, with an emphasis in Angular 6. After I started, I quickly excelled, and within two months I was given \"experienced developer status\" on multiple applications. Using Material Design as a starting point, I helped push for a more cohesive brand and user experience. Finally, I have been a leader in the push to make our web applications more accessible and usable.',
       project : false,
       projectName : '',
       award : false,
