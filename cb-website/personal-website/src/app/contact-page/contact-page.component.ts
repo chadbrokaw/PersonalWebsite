@@ -1,6 +1,12 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import { EmitMyNameService } from '../services/emit-my-name/emit-my-name.service';
-import {animate, query, stagger, state, style, transition, trigger} from "@angular/animations";
+//--Angular---
+import { Component, OnInit }   from '@angular/core';
+import { animate, query,
+  stagger, state, style,
+  transition, trigger }        from "@angular/animations";
+
+//--Services---
+import { EmitMyNameService }   from '../services/emit-my-name/emit-my-name.service';
+
 
 
 @Component({
@@ -33,14 +39,16 @@ import {animate, query, stagger, state, style, transition, trigger} from "@angul
   ]
 })
 export class ContactPageComponent implements OnInit {
+  
+    /*This is a pretty simple component. It only displays contact buttons, but the buttons are quite pretty if I do say so myself...*/
 
-    compName: string = "Contact";
+       compName: string = "Contact";
     screenState: string = 'web';
 
     constructor( private emitMyName: EmitMyNameService ) { }
 
 
     ngOnInit() {
-      this.emitMyName.emitComponentName(this.compName);
+      this.emitMyName.emitComponentName( this.compName );
     }
 }

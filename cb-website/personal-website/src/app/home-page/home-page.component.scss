@@ -4,23 +4,23 @@ html {
 .headerZone {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 51%;
   width: 75%;
   transform: translate(-50%, -50%);
   text-align: center;
   h1 {
-    font-family: "helvetica neue";
+    font-family: "helvetica neue", sans-serif;
     font-weight: 100;
     font-size: 7em;
     padding-bottom: 1em;
   }
   h3 {
-    font-family: "helvetica neue";
+    font-family: "helvetica neue", sans-serif;
     font-weight: 100;
     font-size: 3em;
   }
   h2 {
-    font-family: "helvetica neue";
+    font-family: "helvetica neue", sans-serif;
     font-weight: 100;
     font-size: 4em;
   }

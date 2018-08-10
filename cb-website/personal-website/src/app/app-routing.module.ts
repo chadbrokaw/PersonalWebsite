@@ -1,11 +1,13 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+//--Angular---
+import { NgModule }                from '@angular/core';
+import { RouterModule, Routes }    from '@angular/router';
 
-import { HomePageComponent } from './home-page/home-page.component';
-import { AboutMePageComponent } from './about-me-page/about-me-page.component';
-import { SkillsPageComponent } from './skills-page/skills-page.component';
-import { ContactPageComponent } from './contact-page/contact-page.component';
-import { EducationPageComponent } from './education-page/education-page.component';
+//--Component---
+import { HomePageComponent }       from './home-page/home-page.component';
+import { AboutMePageComponent }    from './about-me-page/about-me-page.component';
+import { SkillsPageComponent }     from './skills-page/skills-page.component';
+import { ContactPageComponent }    from './contact-page/contact-page.component';
+import { EducationPageComponent }  from './education-page/education-page.component';
 import { ExperiencePageComponent } from './experience-page/experience-page.component';
 
 const routes: Routes = [
@@ -16,7 +18,7 @@ const routes: Routes = [
   { path: 'Education', component: EducationPageComponent },
   { path: 'Contact', component: ContactPageComponent },
   { path: 'Experience', component: ExperiencePageComponent }
-]
+];
 
 @NgModule({
   imports: [

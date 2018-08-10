@@ -1,3 +1,4 @@
+//--Angular---
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -80,6 +81,12 @@ export class ClassService {
 
   constructor() { }
 
+  /*
+   * Name: getClasses
+   * Purpose: This functions sole purpose is to return the classes array.
+   * @PARAM: none
+   * @RETURN: An array of classes
+   */
   public getClasses(): any {
     return this.classes;
   }

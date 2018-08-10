@@ -1,10 +1,14 @@
+//--Angular---
 import { Component, OnInit,
-              HostListener } from '@angular/core';
-import { EmitMyNameService } from '../services/emit-my-name/emit-my-name.service';
-import { ClassService }      from '../services/class-service/class-service.service';
+              HostListener }    from '@angular/core';
 import { trigger, state, style,
   animate, transition, query,
   stagger}                      from '@angular/animations';
+
+//--Service---
+import { EmitMyNameService }    from '../services/emit-my-name/emit-my-name.service';
+import { ClassService }         from '../services/class-service/class-service.service';
+
 
 @Component({
   selector: 'app-education-page',
@@ -37,30 +41,42 @@ import { trigger, state, style,
 })
 export class EducationPageComponent implements OnInit {
 
-  compName: string = "Education";
-  screenWidth: any = window.innerWidth;
+   compName: string = "Education";
+   screenWidth: any = window.innerWidth;
   gpaRadius: number = undefined;
-  fontSize: number = undefined;
-  classes: any = undefined;
-  number: number = 1;
+   fontSize: number = undefined;
+       classes: any = undefined;
 
   constructor( private emitMyName: EmitMyNameService,
                private classList: ClassService ) { }
 
   ngOnInit() {
-    this.emitMyName.emitComponentName(this.compName);
-    this.handleScreenSize(this.screenWidth)
+    this.emitMyName.emitComponentName( this.compName );
+    this.handleScreenSize( this.screenWidth );
 
     this.classes = this.classList.getClasses();
   }
 
+  /*
+   * Name: @HostListener
+   * Purpose: This function listens for a change in the size of the window. When a change is detected it saves the width
+   *  and then calls the handleScreenSize function.
+   * @PARAM: event [$event] The resize event
+   */
   @HostListener('window:resize', ['$event'])
-    onResize(event) {
+    onResize( event ) {
       this.screenWidth = window.innerWidth;
-      this.handleScreenSize(this.screenWidth);
+      this.handleScreenSize( this.screenWidth );
     }
 
-  private handleScreenSize(screenSize: any): void {
+  /*
+   * Name: handleScreenSize
+   * Purpose: This function is called whenever the screen size changes. If the screenSize drops below a certain threshold, the
+   *  GPA circle attributes are changed (radius and font-size)
+   * @PARAM: screenSize [any] The current screen size, in pixels
+   * @RETURN: void
+   */
+  private handleScreenSize( screenSize: any ): void {
     if ( screenSize < 625 ) {
       this.gpaRadius = 88;
       this.fontSize = 35;

@@ -8,8 +8,15 @@ import { routerTransition } from './router.animations';
   animations: [ routerTransition ]
 })
 export class AppComponent {
-  onActivate(event) {
+
+
+  /*
+   * Name: onActivate
+   * Purpose: This function forces the window to scroll to the top whenever the route is reloaded.
+   * @PARAM: event [router event]
+   * @RETURN: void
+   *  */
+  onActivate( event ): void {
     window.scroll(0,0);
   }
-
 }

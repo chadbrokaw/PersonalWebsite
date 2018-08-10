@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { EmitMyNameService } from '../services/emit-my-name/emit-my-name.service';
-import {animate, state, style, transition, trigger} from "@angular/animations";
+//--Angular---
+import { Component, OnInit }  from '@angular/core';
+import {animate, state,
+  style, transition, trigger} from "@angular/animations";
+
+//--Services---
+import { EmitMyNameService }  from '../services/emit-my-name/emit-my-name.service';
+
 
 @Component({
   selector: 'app-about-me-page',
@@ -38,11 +43,13 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 })
 export class AboutMePageComponent implements OnInit {
 
+    /*With the exception of the animation series for the text (and the photo of me), this component is pretty simple.*/
+
     compName: string = "AboutMe";
 
     constructor( private emitMyName: EmitMyNameService ) { }
 
     ngOnInit() {
-      this.emitMyName.emitComponentName(this.compName);
+      this.emitMyName.emitComponentName( this.compName );
     }
 }

@@ -1,4 +1,7 @@
+//--Angular---
 import { Injectable } from '@angular/core';
+
+//--Models---
 import { Skill }      from "../../models/skill.model";
 
 @Injectable({
@@ -79,9 +82,17 @@ export class SkillService {
     },
   ];
 
+  constructor() { }
+
+  /*
+   * Name: getSkills
+   * Purpose: This function gathers and returns all of my skills as well as some other data.
+   * @PARAM: none
+   * @RETURN: An array containing all of my skills objects.
+   */
   public getSkills(): any {
     return this.skills;
   }
 
-  constructor() { }
+
 }

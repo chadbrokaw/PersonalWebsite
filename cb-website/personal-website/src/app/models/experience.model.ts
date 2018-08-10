@@ -1,3 +1,7 @@
+/*
+ * Name: Experience [model]
+ * Purpose: This class is used to hold all of the relevant data regarding my experience.
+ */
 export class Experience {
   company: string;
   acronym: boolean;

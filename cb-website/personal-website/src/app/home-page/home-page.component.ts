@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { EmitMyNameService } from '../services/emit-my-name/emit-my-name.service';
-import {animate, state, style, transition, trigger} from "@angular/animations";
+//--Angular---
+import { Component, OnInit }  from '@angular/core';
+import {animate, state,
+  style, transition, trigger} from "@angular/animations";
+
+//--Services---
+import { EmitMyNameService }  from '../services/emit-my-name/emit-my-name.service';
+
 
 @Component({
   selector: 'app-home-page',
@@ -30,12 +35,14 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
 })
 export class HomePageComponent implements OnInit {
 
+  /*This is the component the user first sees, it is just text, but this might change in the future...*/
+
   compName: string = "Home";
 
   constructor( private emitMyName: EmitMyNameService ) { }
 
   ngOnInit() {
-    this.emitMyName.emitComponentName(this.compName);
+    this.emitMyName.emitComponentName( this.compName );
   }
 
 }
