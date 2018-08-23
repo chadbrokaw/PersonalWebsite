@@ -3,6 +3,7 @@ import { Component, OnInit }   from '@angular/core';
 import { animate, query,
   stagger, state, style,
   transition, trigger }        from "@angular/animations";
+import { Title }               from '@angular/platform-browser';
 
 //--Services---
 import { EmitMyNameService }   from '../services/emit-my-name/emit-my-name.service';
@@ -45,10 +46,12 @@ export class ContactPageComponent implements OnInit {
        compName: string = "Contact";
     screenState: string = 'web';
 
-    constructor( private emitMyName: EmitMyNameService ) { }
+    constructor( private emitMyName: EmitMyNameService,
+                 private titleService: Title ) { }
 
 
     ngOnInit() {
       this.emitMyName.emitComponentName( this.compName );
+      this.titleService.setTitle( 'Chad Brokaw | Contact' );
     }
 }

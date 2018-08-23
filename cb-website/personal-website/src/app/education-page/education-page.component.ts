@@ -4,6 +4,7 @@ import { Component, OnInit,
 import { trigger, state, style,
   animate, transition, query,
   stagger}                      from '@angular/animations';
+import { Title }                from '@angular/platform-browser';
 
 //--Service---
 import { EmitMyNameService }    from '../services/emit-my-name/emit-my-name.service';
@@ -34,7 +35,7 @@ import { ClassService }         from '../services/class-service/class-service.se
           transform: 'translateY(50%)',
           opacity: 0
         }),
-        animate('.4s 2.4s ease-in-out')
+        animate('.4s 2.0s ease-in-out')
       ])
     ])
   ]
@@ -48,12 +49,13 @@ export class EducationPageComponent implements OnInit {
        classes: any = undefined;
 
   constructor( private emitMyName: EmitMyNameService,
-               private classList: ClassService ) { }
+               private classList: ClassService,
+               private titleService: Title ) { }
 
   ngOnInit() {
     this.emitMyName.emitComponentName( this.compName );
     this.handleScreenSize( this.screenWidth );
-
+    this.titleService.setTitle('Chad Brokaw | Education');
     this.classes = this.classList.getClasses();
   }
 

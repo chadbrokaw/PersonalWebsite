@@ -1,5 +1,6 @@
 //--Angular---
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit }    from '@angular/core';
+import { Title }                from '@angular/platform-browser';
 
 //--Service---
 import { EmitMyNameService } from '../services/emit-my-name/emit-my-name.service';
@@ -20,11 +21,13 @@ export class ExperiencePageComponent implements OnInit {
   experiences: Experience[] = undefined;
 
   constructor( private emitMyName: EmitMyNameService,
-               private experienceService: ExperienceService ) { }
+               private experienceService: ExperienceService,
+               private titleService: Title ) { }
 
   ngOnInit() {
     this.emitMyName.emitComponentName( this.compName );
     this.getExperiencesFromService();
+    this.titleService.setTitle('Chad Brokaw | Experience')
   }
 
   /*

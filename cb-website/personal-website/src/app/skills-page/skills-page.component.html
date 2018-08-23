@@ -3,7 +3,7 @@
   <div class="allSkills" [@fadeIn]="skills.length">
     <div *ngFor="let skill of skills; let i = index" class = "skill" [ngStyle]="{'margin-right': (i%edgeIndex===(edgeIndex-1) ? '7px' : '8%')}">
       <div class="skillsRank">
-        <div id="level1" class="skillLevel" [class.highlightSkill]="skill.exp>0"></div>
+        <div id="level1" class="skillLevel" [class.highlightSkill]="skill.exp>0" ></div>
         <div id="level2" class="skillLevel" [class.highlightSkill]="skill.exp>1"></div>
         <div id="level3" class="skillLevel" [class.highlightSkill]="skill.exp>2"></div>
         <div id="level4" class="skillLevel" [class.highlightSkill]="skill.exp>3"></div>

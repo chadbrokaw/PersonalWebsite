@@ -2,6 +2,7 @@
 import { Component, OnInit }  from '@angular/core';
 import {animate, state,
   style, transition, trigger} from "@angular/animations";
+import { Title }              from '@angular/platform-browser';
 
 //--Services---
 import { EmitMyNameService }  from '../services/emit-my-name/emit-my-name.service';
@@ -39,10 +40,12 @@ export class HomePageComponent implements OnInit {
 
   compName: string = "Home";
 
-  constructor( private emitMyName: EmitMyNameService ) { }
+  constructor( private emitMyName: EmitMyNameService,
+               private titleService: Title) { }
 
   ngOnInit() {
     this.emitMyName.emitComponentName( this.compName );
+    this.titleService.setTitle('Chad Brokaw | Home');
   }
 
 }

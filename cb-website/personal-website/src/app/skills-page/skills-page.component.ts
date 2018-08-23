@@ -4,6 +4,8 @@ import {Component,
 import {animate, query, stagger,
   state, style,
   transition, trigger}            from "@angular/animations";
+import { Title }                  from '@angular/platform-browser';
+import { MatTooltipModule }       from '@angular/material/tooltip';
 
 //--Model---
 import { Skill }                  from "../models/skill.model";
@@ -49,7 +51,8 @@ export class SkillsPageComponent implements OnInit {
 
 
   constructor( private emitMyName: EmitMyNameService,
-               private skillservice: SkillService ) {
+               private skillservice: SkillService,
+               private titleService: Title ) {
   }
 
   ngOnInit() {
@@ -57,6 +60,7 @@ export class SkillsPageComponent implements OnInit {
       this.skills = this.skillservice.getSkills();
       this.screenWidth = window.innerWidth;
       this.handleScreenSize( this.screenWidth );
+      this.titleService.setTitle('Chad Brokaw | Skills');
   }
 
   /*

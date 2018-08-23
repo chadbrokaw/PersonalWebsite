@@ -18,7 +18,8 @@ import { MenuBarComponent }        from './menu-bar/menu-bar.component';
 import { MenuItemComponent }       from './menu-item/menu-item.component';
 import { AppRoutingModule }        from './app-routing.module';
 
-import { EmitMyNameService } from './services/emit-my-name/emit-my-name.service';
+import { EmitMyNameService }       from './services/emit-my-name/emit-my-name.service';
+import { ExperienceSearchPipe }    from './pipes/experienceSearch/experience-search.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EmitMyNameService } from './services/emit-my-name/emit-my-name.service'
     EducationPageComponent,
     ExperiencePageComponent,
     MenuBarComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    ExperienceSearchPipe
   ],
   imports: [
     BrowserModule,
