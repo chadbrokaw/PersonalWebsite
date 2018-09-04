@@ -5,7 +5,6 @@ import {animate, query, stagger,
   state, style,
   transition, trigger}            from "@angular/animations";
 import { Title }                  from '@angular/platform-browser';
-import { MatTooltipModule }       from '@angular/material/tooltip';
 
 //--Model---
 import { Skill }                  from "../models/skill.model";
@@ -31,36 +30,176 @@ import { EmitMyNameService }      from '../services/emit-my-name/emit-my-name.se
         )
       ])
     ]),
-    trigger('fadeIn2', [
+    trigger('fadeInSingle', [
       state('in', style( { opacity: 1 })),
       transition('void => *', [
         style({
           opacity: 0
         }),
-        animate('1.2s ease-in-out')
+        animate('.6s ease-in-out')
       ])
     ])
   ]
 })
 export class SkillsPageComponent implements OnInit {
 
-     compName: string = "Skills";
+  selectSkill: any = 'Angular';
+  skillLevel: any = 'Experienced';
+
+  single = [
+    {
+      "name": "Angular",
+      "value": 750
+    },
+    {
+      "name": "TypeScript",
+      "value": 650
+    },
+    {
+      "name": "JavaScript",
+      "value": 650
+    },
+    {
+      "name": "HTML",
+      "value": 600
+    },
+    {
+      "name": "CSS",
+      "value": 600
+    },
+    {
+      "name": "Agile",
+      "value": 900
+    },
+    {
+      "name": "iOS/macOS",
+      "value": 1000
+    },
+    {
+      "name": "Docker",
+      "value": 150
+    },
+    {
+      "name": "C++",
+      "value": 300
+    },
+    {
+      "name": "Python",
+      "value": 100
+    },
+    {
+      "name": "mySQL",
+      "value": 200
+    }
+  ];
+
+
+
+
+  // options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  showXAxisLabel = false;
+  showYAxisLabel = false;
+  xAxisTicks = [];
+  xAxisLabel = 'experience level';
+  yAxisLabel = 'skill';
+  legendTitle = 'Skills';
+  colorScheme = {
+    domain: ['#dd0331CC', '#017accCC', '#f0dc4fCC', '#e54d27CC', '#264da4CC', '#af2362CC', '#6ae4edCC', '#099cecCC', '#d35eb8CC', '#ffd03cCC', '#e58f00CC']
+  };
+  compName: string = "Skills";
       skills: Skill[] = undefined;
     edgeIndex: number = 2;
   screenWidth: number = undefined;
+  smallScreen: boolean = false;
 
 
   constructor( private emitMyName: EmitMyNameService,
-               private skillservice: SkillService,
+               private skillService: SkillService,
                private titleService: Title ) {
   }
 
   ngOnInit() {
       this.emitMyName.emitComponentName( this.compName );
-      this.skills = this.skillservice.getSkills();
+      this.skills = this.skillService.getSkills();
       this.screenWidth = window.innerWidth;
       this.handleScreenSize( this.screenWidth );
       this.titleService.setTitle('Chad Brokaw | Skills');
+  }
+
+  bigDisplay($event) {
+    console.log($event);
+    this.selectSkill = $event.value.name;
+
+    let num: number;
+    if ( !$event.value.value ) {
+      //Call from Legend
+      this.single.forEach((obj: any) => {
+        if ( obj.name === this.selectSkill ) {
+          num=obj.value;
+        }
+      });
+    }
+    else {
+      num = $event.value.value;
+    }
+    if ( num < 200 ) {
+      this.skillLevel = 'I\'m learning!';
+    }
+    else if ( num < 300 ) {
+      this.skillLevel = 'Newbie';
+    }
+    else if ( num < 400 ) {
+      this.skillLevel = 'Beginner';
+    }
+    else if ( num < 500 ) {
+      this.skillLevel = 'Some experience';
+    }
+    else if ( num < 600 ) {
+      this.skillLevel = 'Intermediate';
+    }
+    else if ( num < 700 ) {
+      this.skillLevel = 'Proficient';
+    }
+    else if ( num < 800 ) {
+      this.skillLevel = 'Experienced';
+    }
+    else if ( num <= 1000 ) {
+      this.skillLevel = 'Advanced';
+    }
+  }
+
+
+  smallDisplay(skill) {
+    this.selectSkill = skill.name;
+    let num = skill.exp;
+    if ( num < 200 ) {
+      this.skillLevel = 'I\'m learning!';
+    }
+    else if ( num < 300 ) {
+      this.skillLevel = 'Newbie';
+    }
+    else if ( num < 400 ) {
+      this.skillLevel = 'Beginner';
+    }
+    else if ( num < 500 ) {
+      this.skillLevel = 'Some experience';
+    }
+    else if ( num < 600 ) {
+      this.skillLevel = 'Intermediate';
+    }
+    else if ( num < 700 ) {
+      this.skillLevel = 'Proficient';
+    }
+    else if ( num < 800 ) {
+      this.skillLevel = 'Experienced';
+    }
+    else if ( num <= 1000 ) {
+      this.skillLevel = 'Advanced';
+    }
   }
 
   /*
@@ -85,9 +224,18 @@ export class SkillsPageComponent implements OnInit {
    * @RETURN: void
    */
   handleScreenSize( screenwidth: number ) {
+    if ( screenwidth <= 775 ) {
+      this.smallScreen = true
+    }
+    else {
+      this.smallScreen = false;
+    }
+
+
     if ( screenwidth < 653 ) {
       this.edgeIndex = 2;
     }
+
     else if ( screenwidth < 958 ) {
       this.edgeIndex = 3;
     }

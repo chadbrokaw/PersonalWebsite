@@ -7,5 +7,6 @@ export class Skill {
   hex: string;
   shadow: string;
   image: string;
-  exp: number
+  exp: number;
+  id: string;
 }

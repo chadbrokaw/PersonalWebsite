@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class ClassService {
   classes: any = [
     {
-      "Name" : "Introduction to UI Design",
+      "Name" : "Interface Design",
       "CSCIClass" : true,
       "Grade" : "",
       "InProgress" : true,

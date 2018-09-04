@@ -1,3 +1,8 @@
+* {
+  font-family: "helvetica neue", sans-serif !important;
+}
+
+
 .mainText {
   position: absolute;
   top: 40%;
@@ -5,11 +10,60 @@
   width: 75%;
   transform: translate(-50%, -50%);
   text-align: center;
+  .skill-bar {
+    width: auto;
+    height: 700px;
+    margin-bottom: 2em;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transition: 20s ease-in;
+    .specificSkill {
+      width: 80%;
+      height: 60px;
+      background: #f4f4f4;
+      margin-bottom: 1.5em;
+      border-radius:10px;
+      display: flex;
+      justify-content: space-evenly;
+      padding-top: 30px;
+      flex-wrap: wrap;
+      .skillTitle {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+      .skillLevel {
+        padding-top:.35em;
+      }
+    }
+    .specificSkillBelow {
+      width: 80%;
+      height: 60px;
+      background: #f4f4f4;
+      margin-bottom: 1.5em;
+      border-radius:10px;
+      display: flex;
+      justify-content: space-evenly;
+      padding-top: 30px;
+      flex-wrap: wrap;
+      .skillTitle {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+      .skillLevel {
+        padding-top:.35em;
+      }
+    }
+  }
+
   h1 {
     padding-top: 7em;
     font-family: "helvetica neue", sans-serif;
     font-weight: 100;
     font-size: 4em;
+    padding-bottom: 1em;
   }
   .allSkills {
     display: flex;
@@ -21,9 +75,7 @@
     .skill {
       display: flex;
       flex-direction: row;
-      margin-top: 3%;
-      margin-bottom: 6%;
-      margin-right: 8%;
+      margin: 1em;
 
       .skillsRank {
         display: flex;
@@ -56,7 +108,127 @@
         width: 70px;
         height: 70px;
         border-radius: 10%;
-        box-shadow: 1px 1px 10px 0 #017acc7d;
+        box-shadow: 1px 1px 10px;
+      }
+
+      .Angular {
+        box-shadow: 1px 1px 20px #dd03317d;
+      }
+      .Angular:active {
+        box-shadow: 1px 1px 11px #dd03317d;
+        transition: .2s ease-in-out;
+      }
+      .Angular:hover {
+        box-shadow: 1px 1px 11px #dd03317d;
+        transition: .2s ease-in-out;
+      }
+
+      .Typescript {
+        box-shadow: 1px 1px 20px #017acc7d;
+      }
+      .Typescript:active {
+        box-shadow: 1px 1px 11px #017acc7d;
+        transition: .2s ease-in-out;
+      }
+      .Typescript:hover {
+        box-shadow: 1px 1px 11px #017acc7d;
+        transition: .2s ease-in-out;
+      }
+
+      .Javascript {
+        box-shadow: 1px 1px 20px #FFC770;
+      }
+      .Javascript:active {
+        box-shadow: 1px 1px 11px #FFC770;
+        transition: .2s ease-in-out;
+      }
+      .Javascript:hover {
+        box-shadow: 1px 1px 11px #FFC770;
+        transition: .2s ease-in-out;
+      }
+
+      .HTML {
+        box-shadow: 1px 1px 20px #e54d277d;
+      }
+      .HTML:active {
+        box-shadow: 1px 1px 11px #e54d277d;
+        transition: .2s ease-in-out;
+      }
+      .HTML:hover {
+        box-shadow: 1px 1px 11px #e54d277d;
+        transition: .2s ease-in-out;
+      }
+
+      .CSS {
+        box-shadow: 1px 1px 20px #264da47d;
+      }
+      .CSS:active {
+        box-shadow: 1px 1px 11px #264da47d;
+        transition: .2s ease-in-out;
+      }
+      .CSS:hover {
+        box-shadow: 1px 1px 11px #264da47d;
+        transition: .2s ease-in-out;
+      }
+
+      .Agile {
+        box-shadow: 1px 1px 20px #af23627d;
+      }
+      .Agile:active {
+        box-shadow: 1px 1px 11px #af23627d;
+        transition: .2s ease-in-out;
+      }
+      .Agile:hover {
+        box-shadow: 1px 1px 11px #af23627d;
+        transition: .2s ease-in-out;
+      }
+
+      .iOSMacOS {
+        box-shadow: 1px 1px 20px #6ae4edd9;
+      }
+      .iOSMacOS:active {
+        box-shadow: 1px 1px 11px #6ae4edd9;
+        transition: .2s ease-in-out;
+      }
+      .iOSMacOS:hover {
+        box-shadow: 1px 1px 11px #6ae4edd9;
+        transition: .2s ease-in-out;
+      }
+
+      .Docker {
+        box-shadow: 1px 1px 20px #099cec7d;
+      }
+      .Docker:active {
+        box-shadow: 1px 1px 11px #099cec7d;
+        transition: .2s ease-in-out;
+      }
+      .Docker:hover {
+        box-shadow: 1px 1px 11px #099cec7d;
+        transition: .2s ease-in-out;
+      }
+
+      .Cpp {
+        box-shadow: 1px 1px 20px #d35eb87d;
+      }
+      .Cpp:active {
+        box-shadow: 1px 1px 11px #d35eb87d;
+        transition: .2s ease-in-out;
+      }
+      .Cpp:hover {
+        box-shadow: 1px 1px 11px #d35eb87d;
+        transition: .2s ease-in-out;
+      }
+
+      .Python {
+        box-shadow: 1px 1px 20px #ffd03cd9;
+      }
+      .Python:active {
+        box-shadow: 1px 1px 11px #ffd03cd9;
+        transition: .2s ease-in-out;
+      }
+      .Python:hover {
+        box-shadow: 1px 1px 11px #ffd03cd9;
+        transition: .2s ease-in-out;
       }
     }
   }
@@ -100,7 +272,14 @@
 
 @media only screen and (min-width:958px) {
   .mainText h1 {
-    padding-top: 3.5em;
+    padding-top: 8.5em;
+  }
+}
+
+@media only screen and (max-width:586px) {
+  .mainText .container .specificSkill {
+    flex-direction: column;
+    padding: 20px;
   }
 }
 

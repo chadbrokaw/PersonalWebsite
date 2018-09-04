@@ -7,14 +7,33 @@ import { Experience } from '../../models/experience.model';
 export class ExperienceSearchPipe implements PipeTransform {
 
   transform( items: Experience[],
-             currentlyEmployed: boolean,
-             employment: boolean,
+             highlights: boolean,
+             work: boolean,
              award: boolean,
+             club: boolean,
              project: boolean,
-             club: boolean ): any {
+             everything: boolean): any {
+    debugger;
+    if ( everything ) {
+      return items;
+    }
 
     if ( items && items.length ) {
-
+        return items.filter((item) => {
+          debugger;
+          if (
+            ( highlights && item.highlight === highlights ) ||
+            ( work && item.work === work ) ||
+            ( club && item.club === club ) ||
+            ( award && item.award === award ) ||
+            ( project && item.project === project )
+          ) {
+              return true
+          }
+          else {
+            return false;
+          }
+        })
     }
     else {
       return items;

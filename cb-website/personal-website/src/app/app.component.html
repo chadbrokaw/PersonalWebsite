@@ -1,6 +1,7 @@
 <div class=container>
   <div class="menuBar"><menu-bar></menu-bar></div>
-  <main>
+  <main class ="main">
     <router-outlet (activate)="onActivate($event)"></router-outlet>
   </main>
+  <div class="menuBar"></div>
 </div>

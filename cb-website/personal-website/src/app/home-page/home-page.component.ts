@@ -31,6 +31,15 @@ import { EmitMyNameService }  from '../services/emit-my-name/emit-my-name.servic
         }),
         animate('1.2s ease-in-out')
       ])
+    ]),
+    trigger('fadeInLate', [
+      state('inLate', style( { opacity: 1 })),
+      transition('void => *', [
+        style({
+          opacity: 0
+        }),
+        animate('.8s 3.6s ease-in-out')
+      ])
     ])
   ]
 })

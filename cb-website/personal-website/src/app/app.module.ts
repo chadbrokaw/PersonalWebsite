@@ -5,6 +5,7 @@ import { MatButtonModule,
   MatIconModule }                  from '@angular/material';
 import { FlexLayoutModule }        from '@angular/flex-layout';
 import { NgCircleProgressModule }  from 'ng-circle-progress';
+import { NgxChartsModule }         from '@swimlane/ngx-charts';
 
 
 import { AppComponent }            from './app.component';
@@ -58,7 +59,8 @@ import { ExperienceSearchPipe }    from './pipes/experienceSearch/experience-sea
       animationDuration: 1000,
       showSubtitle: false,
       showUnits: false
-    })
+    }),
+    NgxChartsModule
   ],
   providers: [EmitMyNameService],
   bootstrap: [AppComponent]

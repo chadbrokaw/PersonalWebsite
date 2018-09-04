@@ -19,6 +19,21 @@ export class ExperiencePageComponent implements OnInit {
 
            compName: string = "Experience";
   experiences: Experience[] = undefined;
+  flag: boolean = false;
+  highlightButton: boolean = true;
+  workButton: boolean = false;
+  awardButton: boolean = false;
+  clubsButton: boolean = false;
+  projectsButton: boolean = false;
+  everythingButton: boolean = false;
+
+  highlightButtonType: string = 'select';
+  workButtonType: string = 'disabled';
+  awardButtonType: string = 'disabled';
+  clubsButtonType: string = 'disabled';
+  projectsButtonType: string = 'disabled';
+  everythingButtonType: string = 'disabled';
+
 
   constructor( private emitMyName: EmitMyNameService,
                private experienceService: ExperienceService,
@@ -38,6 +53,78 @@ export class ExperiencePageComponent implements OnInit {
    */
   public getExperiencesFromService(): void {
     this.experiences = this.experienceService.get();
+  }
+
+  public filterSelect(button: string) {
+
+    switch (button) {
+      case 'highlight':
+        if ( this.highlightButton ) {
+          this.highlightButton = !this.highlightButton;
+          this.highlightButtonType = "disabled";
+        }
+        else {
+          this.highlightButton = !this.highlightButton;
+          this.highlightButtonType = "select";
+        }
+        break;
+
+      case 'work':
+        if ( this.workButton ) {
+          this.workButton = !this.workButton;
+          this.workButtonType = "disabled";
+        }
+        else {
+          this.workButton = !this.workButton;
+          this.workButtonType = "select";
+        }
+        break;
+
+      case 'award':
+        if ( this.awardButton ) {
+          this.awardButton = !this.awardButton;
+          this.awardButtonType = "disabled";
+        }
+        else {
+          this.awardButton = !this.awardButton;
+          this.awardButtonType = "select";
+        }
+        break;
+
+      case 'clubs':
+        if ( this.clubsButton ) {
+          this.clubsButton = !this.clubsButton;
+          this.clubsButtonType = "disabled";
+        }
+        else {
+          this.clubsButton = !this.clubsButton;
+          this.clubsButtonType = "select";
+        }
+        break;
+
+      case 'projects':
+        if ( this.projectsButton ) {
+          this.projectsButton = !this.projectsButton;
+          this.projectsButtonType = "disabled";
+        }
+        else {
+          this.projectsButton = !this.projectsButton;
+          this.projectsButtonType = "select";
+        }
+        break;
+
+      case 'everything':
+        if ( this.everythingButton ) {
+          this.everythingButton = !this.everythingButton;
+          this.everythingButtonType = "disabled";
+        }
+        else {
+          this.everythingButton = !this.everythingButton;
+          this.everythingButtonType = "select";
+        }
+        break;
+    }
+    console.log(this.highlightButton);
   }
 
 }

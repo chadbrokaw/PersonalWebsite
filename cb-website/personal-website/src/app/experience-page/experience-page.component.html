@@ -1,7 +1,15 @@
 <div class="mainText">
   <h1 id="mainHeader">Here's where I've been</h1>
-  <div class="experienceUnit" *ngFor="let experience of experiences">
-    <img src="./assets/{{experience.imageName}}" class="image">
+  <div class="buttonArr">
+    <div  (click)="filterSelect('highlight')" class="buttonClicker"><button mat-button [color]='highlightButtonType'>Highlights</button></div>
+    <span (click)="filterSelect('work')"  class="buttonClicker"><button mat-button  [color]='workButtonType'>Work</button></span>
+    <span (click)="filterSelect('award')"  class="buttonClicker"><button mat-button [color]='awardButtonType'>Awards</button></span>
+    <span (click)="filterSelect('clubs')"  class="buttonClicker"><button mat-button [color]='clubsButtonType'>Clubs</button></span>
+    <span (click)="filterSelect('projects')"  class="buttonClicker"><button mat-button [color]='projectsButtonType'>Projects</button></span>
+    <span (click)="filterSelect('everything')"  class="buttonClicker"><button mat-button [color]='everythingButtonType'>Everything</button></span>
+  </div>
+  <div class="experienceUnit" *ngFor="let experience of experiences | experienceSearch: highlightButton:workButton:awardButton:clubsButton:projectsButton:everythingButton">
+    <img src="./assets/{{experience.imageName}}" class="image" *ngIf="experience.imageAvailable">
     <div class="content">
       <h1 class="header">{{((experience.acronym) ? experience.fullTitle : experience.company)}}</h1>
       <h3 class="position">{{experience.position}}</h3>

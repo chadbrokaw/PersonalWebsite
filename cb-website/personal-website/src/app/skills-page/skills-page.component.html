@@ -1,14 +1,41 @@
 <div class="mainText">
-  <h1>Here's what I'm good at</h1>
-  <div class="allSkills" [@fadeIn]="skills.length">
-    <div *ngFor="let skill of skills; let i = index" class = "skill" [ngStyle]="{'margin-right': (i%edgeIndex===(edgeIndex-1) ? '7px' : '8%')}">
-      <div class="skillsRank">
-        <div id="level1" class="skillLevel" [class.highlightSkill]="skill.exp>0" ></div>
-        <div id="level2" class="skillLevel" [class.highlightSkill]="skill.exp>1"></div>
-        <div id="level3" class="skillLevel" [class.highlightSkill]="skill.exp>2"></div>
-        <div id="level4" class="skillLevel" [class.highlightSkill]="skill.exp>3"></div>
+  <h1>Here are my skills</h1>
+  <div class="allSkills" [@fadeIn]="skills.length" *ngIf="smallScreen">
+    <div class="container">
+      <div class="specificSkill">
+        <span class="skillTitle" *ngIf="selectSkill" [@fadeInSingle]="'in'">{{selectSkill}}</span> <span class="skillLevel" *ngIf="selectSkill" [@fadeInSingle]="'in'">{{skillLevel}}</span>
       </div>
-      <img class="personalImage" src="./assets/{{skill.image}}" [ngStyle]="{'box-shadow': skill.shadow}" alt="Chad Brokaw">
+    </div>
+    <div *ngFor="let skill of skills; let i = index" class = "skill"   (click)="smallDisplay(skill)">
+      <img class="personalImage  {{skill.id}}" src="./assets/{{skill.image}}"  alt="Chad Brokaw">
+    </div>
+  </div>
+  <div class="container" *ngIf="!smallScreen">
+    <div class="specificSkillBelow">
+      <span class="skillTitle" *ngIf="selectSkill" [@fadeInSingle]="'in'">{{selectSkill}}</span> <span class="skillLevel" *ngIf="selectSkill" [@fadeInSingle]="'in'">{{skillLevel}}</span>
+    </div>
+  </div>
+  <div class="skill-bar" *ngIf="!smallScreen">
+    <ngx-charts-bar-horizontal
+      [scheme]="colorScheme"
+      [results]="single"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [xAxisTicks]="xAxisTicks"
+      [tooltipDisabled]="true"
+      [legendTitle]="legendTitle"
+      (activate)="bigDisplay($event)">
+    </ngx-charts-bar-horizontal>
+  </div>
+  <div class="container" *ngIf="!smallScreen">
+    <div class="specificSkillBelow">
+      <span class="skillTitle" *ngIf="selectSkill" [@fadeInSingle]="'in'">{{selectSkill}}</span> <span class="skillLevel" *ngIf="selectSkill" [@fadeInSingle]="'in'">{{skillLevel}}</span>
     </div>
   </div>
 </div>

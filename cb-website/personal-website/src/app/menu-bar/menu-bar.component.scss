@@ -1,11 +1,12 @@
 .welcomeScreen {
   display: flex;
   position: fixed;
+  height: 100%;
   .container {
     display: flex;
     width: 19%;
     height: 100%;
-    margin: none;
+    margin: 0;
     flex-direction: column;
     justify-content: space-between;
 
@@ -58,6 +59,7 @@
 .ContactIcon {
   width: 50px;
   height: 40px;
+  padding-bottom: 6vh;
 }
 
 .buttonContainer {

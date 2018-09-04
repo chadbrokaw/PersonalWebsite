@@ -15,72 +15,83 @@ export class SkillService {
       hex: "#dd0331",
       shadow: "0 0 6px 0 #dd03317d",
       image: "angular.png",
-      exp: 3
+      exp: 750,
+      id: "Angular"
     },
     {
       name: "Typescript",
       hex: "#017acc",
       shadow: "0 0 6px 0 #017acc7d",
       image: "typescript.png",
-      exp: 3
+      exp: 650,
+      id: "Typescript"
     },
     {
       name: "Javascript",
       hex: "#f0dc4f",
       shadow: "0 0 6px 0 #f0dc4fe0",
       image: "javascript.png",
-      exp: 3
+      exp: 650,
+      id: "Javascript"
     },
     {
       name: "HTML",
       hex: "#e54d27",
       shadow: "0 0 6px 0 #e54d277d",
       image: "html.png",
-      exp: 3
+      exp: 600,
+      id: "HTML"
     },
     {
       name: "CSS",
       hex: "#264da4",
       shadow: "0 0 6px 0 #264da47d",
       image: "css.png",
-      exp: 3
+      exp: 600,
+      id: "CSS"
     },
     {
       name: "Agile",
       hex: "#af2362",
       shadow: "0 0 6px 0 #af23627d",
       image: "agile.png",
-      exp: 3
+      exp: 900,
+      id: "Angular"
     },
     {
       name: "iOS/MacOS",
       hex: "#6ae4ed",
       shadow: "0 0 6px 0 #6ae4edd9",
       image: "appleOS.png",
-      exp: 4
+      exp: 1000,
+      id: "iOSMacOS"
     },
     {
       name: "Docker",
       hex: "#099cec",
       shadow: "0 0 6px 0 #099cec7d",
       image: "docker.png",
-      exp: 1
+      exp: 150,
+      id: "Docker"
     },
     {
       name: "C++",
       hex: "#d35eb8",
       shadow: "0 0 6px 0 #d35eb87d",
       image: "c++.png",
-      exp: 2
+      exp: 300,
+      id: "Cpp"
     },
     {
       name: "Python",
       hex: "#ffd03c",
       shadow: "0 0 6px 0 #ffd03cd9",
       image: "python.png",
-      exp: 1
+      exp: 100,
+      id: "Python"
     },
   ];
+  //TODO: Add mySQL
 
   constructor() { }
 

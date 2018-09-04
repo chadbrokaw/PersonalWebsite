@@ -1,5 +1,9 @@
 <div class="profilePic">
-  <img id="personalImage" src="./assets/Headshot.JPG" alt="Chad Brokaw" [@fadeIn]="'in'">
+  <div class="imgCarousel">
+    <button mat-mini-fab class="direction_arrow standard" color="'standard'" [@fadeInLate]="'in'" (click)="arrowClick('back')"><mat-icon>arrow_back</mat-icon></button>
+    <img id="personalImage" src="{{photoNames[photoNamesCounter]}}" alt="Chad Brokaw" [@fadeIn]="'in'">
+    <button mat-mini-fab class="direction_arrow standard" color="'standard'" [@fadeInLate]="'in'" (click)="arrowClick('forward')"><mat-icon>arrow_forward</mat-icon></button>
+  </div>
   <h1 [@h1FadeIn]= "">Hello</h1>
   <div class="aboutMe">
     <h3 [@h3FadeIn]="'in'">I'm a front-end software engineer (and student)</h3>
