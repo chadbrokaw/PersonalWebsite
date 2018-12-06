@@ -21,6 +21,7 @@ import { AppRoutingModule }        from './app-routing.module';
 
 import { EmitMyNameService }       from './services/emit-my-name/emit-my-name.service';
 import { ExperienceSearchPipe }    from './pipes/experienceSearch/experience-search.pipe';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ExperienceSearchPipe }    from './pipes/experienceSearch/experience-sea
     ExperiencePageComponent,
     MenuBarComponent,
     MenuItemComponent,
-    ExperienceSearchPipe
+    ExperienceSearchPipe,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { SkillsPageComponent }     from './skills-page/skills-page.component';
 import { ContactPageComponent }    from './contact-page/contact-page.component';
 import { EducationPageComponent }  from './education-page/education-page.component';
 import { ExperiencePageComponent } from './experience-page/experience-page.component';
+import { PortfolioComponent }      from "./portfolio/portfolio.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full'},
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'Skills', component: SkillsPageComponent },
   { path: 'Education', component: EducationPageComponent },
   { path: 'Contact', component: ContactPageComponent },
-  { path: 'Experience', component: ExperiencePageComponent }
+  { path: 'Experience', component: ExperiencePageComponent },
+  { path: 'Portfolio', component: PortfolioComponent }
 ];
 
 @NgModule({
