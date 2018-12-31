@@ -7,233 +7,475 @@
   }
 }
 
-.contentHeader {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding-top: 180px;
-  h1 {
-    font-family: "helvetica neue", sans-serif;
-    font-weight: normal;
-    color: #363732;
-    font-size: 3em;
-  }
-}
+.smallScreen {
+  padding: 0 16px 0 16px;
 
-.projectSummary {
-  margin-top: 180px;
-  width: 100%;
-  h3 {
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    font-family: "helvetica neue", sans-serif;
-    font-weight: bold;
-    color: rgba(54, 55, 50, 0.6);
-    font-size: 4em;
-    clear: both;
+  .contentHeader {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 140px;
+    h1 {
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: #363732;
+      font-size: 3.5em;
+    }
   }
-  p {
-    padding-top: 50px;
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    max-width: 100%;
-    font-size: 2em;
-    font-family: "helvetica neue", sans-serif;
-  }
-}
 
-.researchFindings {
-  padding-top: 120px;
-  width: 100%;
-  h3 {
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    font-family: "helvetica neue", sans-serif;
-    font-weight: bold;
-    color: rgba(54, 55, 50, 0.6);
-    font-size: 4em;
-    clear: both;
-  }
-  p {
-    padding-top: 50px;
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    max-width: 100%;
-    font-size: 2em;
-    font-family: "helvetica neue", sans-serif;
-  }
-  ol, ul {
-    padding-left: 10%;
-    padding-top: 2%;
-    li {
-      padding: 1%;
+  .projectSummary {
+    margin-top: 180px;
+    width: 100%;
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    p {
+      padding-top: 50px;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
       max-width: 100%;
-      font-size: 1.6em;
+      font-size: 2em;
       font-family: "helvetica neue", sans-serif;
     }
   }
-}
 
-.competitiveAnalysis {
-  padding-top: 120px;
-  width: 100%;
-  h3 {
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    font-family: "helvetica neue", sans-serif;
-    font-weight: bold;
-    color: rgba(54, 55, 50, 0.6);
-    font-size: 4em;
-    clear: both;
-  }
-  p {
-    padding-top: 50px;
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    max-width: 100%;
-    font-size: 2em;
-    font-family: "helvetica neue", sans-serif;
-  }
-  .ListOfCompetitors {
-    padding-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    .competitor {
-      display: flex;
-      flex-direction: column;
-      justify-content: inherit;
-      align-items: center;
-      h5 {
-        font-size: 2em;
-        font-family: "helvetica neue", sans-serif;
-        color: rgba(54, 55, 50, 0.8);
-      }
-      h6 {
-        margin-top: 10px;
-        font-size: 1.7em;
-        font-family: "helvetica neue", sans-serif;
-        color: rgba(54, 55, 50, 0.8);
-      }
-      p {
-        font-weight: normal;
-        color: rgba(54, 55, 50, 0.8);
-        padding: 5px;
-        font-size: 1.3em;
+  .researchFindings {
+    padding-top: 120px;
+    width: 100%;
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    p {
+      padding-top: 50px;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      max-width: 100%;
+      font-size: 2em;
+      font-family: "helvetica neue", sans-serif;
+    }
+    ol, ul {
+      padding-left: 10%;
+      padding-top: 2%;
+      li {
+        padding: 1%;
+        max-width: 100%;
+        font-size: 1.6em;
         font-family: "helvetica neue", sans-serif;
       }
     }
   }
-}
 
-.primaryUserFlow {
-  padding-top: 120px;
-  width: 100%;
-
-  h3 {
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    font-family: "helvetica neue", sans-serif;
-    font-weight: bold;
-    color: rgba(54, 55, 50, 0.6);
-    font-size: 4em;
-    clear: both;
-  }
-  .imageContainer {
+  .competitiveAnalysis {
+    padding-top: 120px;
     width: 100%;
-    img {
-      align-self: center;
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    p {
+      padding-top: 50px;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      max-width: 100%;
+      font-size: 2em;
+      font-family: "helvetica neue", sans-serif;
+    }
+    .ListOfCompetitors {
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      .competitor {
+        padding-top: 64px;
+        display: flex;
+        flex-direction: column;
+        justify-content: inherit;
+        align-items: center;
+        h5 {
+          font-size: 2em;
+          font-family: "helvetica neue", sans-serif;
+          color: rgba(54, 55, 50, 0.8);
+        }
+        h6 {
+          margin-top: 10px;
+          font-size: 1.7em;
+          font-family: "helvetica neue", sans-serif;
+          color: rgba(54, 55, 50, 0.8);
+        }
+        p {
+          font-weight: normal;
+          color: rgba(54, 55, 50, 0.8);
+          padding: 5px;
+          font-size: 1.3em;
+          font-family: "helvetica neue", sans-serif;
+        }
+      }
+    }
+  }
+
+  .primaryUserFlow {
+    padding-top: 120px;
+    width: 100%;
+
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    .imageContainer {
+      width: 100%;
+      img {
+        align-self: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .usabilityTest {
+    padding-top: 120px;
+    width: 100%;
+
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    p {
+      padding-top: 50px;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      max-width: 100%;
+      font-size: 2em;
+      font-family: "helvetica neue", sans-serif;
+    }
+    ol, ul {
+      padding-left: 10%;
+      padding-top: 2%;
+      li {
+        padding: 1%;
+        max-width: 100%;
+        font-size: 1.6em;
+        font-family: "helvetica neue", sans-serif;
+      }
+    }
+  }
+
+  .finalMockup {
+    padding-top: 120px;
+    width: 100%;
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    .finalMockupImage {
+      padding-top: 50px;
       width: 100%;
     }
   }
-}
 
-.usabilityTest {
-  padding-top: 120px;
-  width: 100%;
+  .InteractivePrototype {
+    padding-top: 120px;
+    width: 70%;
 
-  h3 {
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    font-family: "helvetica neue", sans-serif;
-    font-weight: bold;
-    color: rgba(54, 55, 50, 0.6);
-    font-size: 4em;
-    clear: both;
-  }
-  p {
-    padding-top: 50px;
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    max-width: 100%;
-    font-size: 2em;
-    font-family: "helvetica neue", sans-serif;
-  }
-  ol, ul {
-    padding-left: 10%;
-    padding-top: 2%;
-    li {
-      padding: 1%;
-      max-width: 100%;
-      font-size: 1.6em;
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
       font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+  }
+
+  .prototypeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h6 {
+      margin-top: 10px;
+      font-size: 1.7em;
+      font-family: "helvetica neue", sans-serif;
+      margin-bottom: 64px;
     }
   }
 }
 
-.finalMockup {
-  padding-top: 120px;
-  width: 100%;
-  h3 {
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    font-family: "helvetica neue", sans-serif;
-    font-weight: bold;
-    color: rgba(54, 55, 50, 0.6);
-    font-size: 4em;
-    clear: both;
+.largeScreen {
+  .contentHeader {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 180px;
+    h1 {
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: #363732;
+      font-size: 3.5em;
+    }
   }
-  .finalMockupImage {
-    padding-top: 50px;
+
+  .projectSummary {
+    margin-top: 180px;
     width: 100%;
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    p {
+      padding-top: 50px;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      max-width: 100%;
+      font-size: 2em;
+      font-family: "helvetica neue", sans-serif;
+    }
+  }
+
+  .researchFindings {
+    padding-top: 120px;
+    width: 100%;
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    p {
+      padding-top: 50px;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      max-width: 100%;
+      font-size: 2em;
+      font-family: "helvetica neue", sans-serif;
+    }
+    ol, ul {
+      padding-left: 10%;
+      padding-top: 2%;
+      li {
+        padding: 1%;
+        max-width: 100%;
+        font-size: 1.6em;
+        font-family: "helvetica neue", sans-serif;
+      }
+    }
+  }
+
+  .competitiveAnalysis {
+    padding-top: 120px;
+    width: 100%;
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    p {
+      padding-top: 50px;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      max-width: 100%;
+      font-size: 2em;
+      font-family: "helvetica neue", sans-serif;
+    }
+    .ListOfCompetitors {
+      padding-top: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      .competitor {
+        display: flex;
+        flex-direction: column;
+        justify-content: inherit;
+        align-items: center;
+        h5 {
+          font-size: 2em;
+          font-family: "helvetica neue", sans-serif;
+          color: rgba(54, 55, 50, 0.8);
+        }
+        h6 {
+          margin-top: 10px;
+          font-size: 1.7em;
+          font-family: "helvetica neue", sans-serif;
+          color: rgba(54, 55, 50, 0.8);
+        }
+        p {
+          font-weight: normal;
+          color: rgba(54, 55, 50, 0.8);
+          padding: 5px;
+          font-size: 1.3em;
+          font-family: "helvetica neue", sans-serif;
+        }
+      }
+    }
+  }
+
+  .primaryUserFlow {
+    padding-top: 120px;
+    width: 100%;
+
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    .imageContainer {
+      width: 100%;
+      img {
+        align-self: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .usabilityTest {
+    padding-top: 120px;
+    width: 100%;
+
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    p {
+      padding-top: 50px;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      max-width: 100%;
+      font-size: 2em;
+      font-family: "helvetica neue", sans-serif;
+    }
+    ol, ul {
+      padding-left: 10%;
+      padding-top: 2%;
+      li {
+        padding: 1%;
+        max-width: 100%;
+        font-size: 1.6em;
+        font-family: "helvetica neue", sans-serif;
+      }
+    }
+  }
+
+  .finalMockup {
+    padding-top: 120px;
+    width: 100%;
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+    .finalMockupImage {
+      padding-top: 50px;
+      width: 100%;
+    }
+  }
+
+  .InteractivePrototype {
+    padding-top: 120px;
+    width: 100%;
+
+    h3 {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      font-family: "helvetica neue", sans-serif;
+      font-weight: bold;
+      color: rgba(54, 55, 50, 0.6);
+      font-size: 4em;
+      clear: both;
+    }
+  }
+
+  .prototypeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    iframe {
+      padding-top: 50px;
+    }
   }
 }
 
-.InteractivePrototype {
-  padding-top: 120px;
-  width: 100%;
 
-  h3 {
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    font-family: "helvetica neue", sans-serif;
-    font-weight: bold;
-    color: rgba(54, 55, 50, 0.6);
-    font-size: 4em;
-    clear: both;
-  }
-}
-
-.prototypeContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  iframe {
-    padding-top: 50px;
-  }
-}

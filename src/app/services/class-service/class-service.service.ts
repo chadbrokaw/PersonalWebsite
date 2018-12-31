@@ -1,4 +1,4 @@
-//--Angular---
+// --Angular---
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,77 +6,97 @@ import { Injectable } from '@angular/core';
 })
 export class ClassService {
   classes: any = [
-    {
-      "Name" : "Interface Design",
-      "CSCIClass" : true,
-      "Grade" : "",
-      "InProgress" : true,
-      "Completed" : false
-    },
-    {
-      "Name" : "Mobile Application Development",
-      "CSCIClass" : true,
-      "Grade" : "",
-      "InProgress" : true,
-      "Completed" : false
-    },
-    {
-      "Name" : "Algorithms",
-      "CSCIClass" : true,
-      "Grade" : "",
-      "InProgress" : true,
-      "Completed" : false
-    },
-    {
-      "Name" : "Introduction to CyberSecurity",
-      "CSCIClass" : true,
-      "Grade" : "",
-      "InProgress" : true,
-      "Completed" : false
-    },
-    {
-      "Name" : "Computer Systems",
-      "CSCIClass" : true,
-      "Grade" : "A",
-      "InProgress" : false,
-      "Completed" : true
-    },
-    {
-      "Name" : "Software Dev Methods and Tools",
-      "CSCIClass" : true,
-      "Grade" : "A",
-      "InProgress" : false,
-      "Completed" : true
-    },
-    {
-      "Name" : "Linear Algebra with CS Applications",
-      "CSCIClass" : true,
-      "Grade" : "A-",
-      "InProgress" : false,
-      "Completed" : true
-    },
-    {
-      "Name" : "Data Structures",
-      "CSCIClass" : true,
-      "Grade" : "A",
-      "InProgress" : false,
-      "Completed" : true
-    },
-    {
-      "Name" : "Discrete Structures",
-      "CSCIClass" : true,
-      "Grade" : "A-",
-      "InProgress" : false,
-      "Completed" : true
-    },
-    {
-      "Name" : "Introduction to Computing",
-      "CSCIClass" : true,
-      "Grade" : "A",
-      "InProgress" : false,
-      "Completed" : true
-    }
-
+      {
+          'Name' : 'Principles of Programming Languages',
+          'CSCIClass' : true,
+          'Grade' : '',
+          'InProgress' : true,
+          'Completed' : false
+      },
+      {
+          'Name' : 'Programming Project Workshop',
+          'CSCIClass' : true,
+          'Grade' : '',
+          'InProgress' : true,
+          'Completed' : false
+      },
+      {
+          'Name' : 'Human Computer Interaction',
+          'CSCIClass' : true,
+          'Grade' : '',
+          'InProgress' : true,
+          'Completed' : false
+      },
+      {
+          'Name' : 'Interface Design',
+          'CSCIClass' : true,
+          'Grade' : 'A',
+          'InProgress' : false,
+          'Completed' : true
+      },
+      {
+          'Name' : 'Mobile Application Development',
+          'CSCIClass' : true,
+          'Grade' : 'A',
+          'InProgress' : false,
+          'Completed' : true
+      },
+      {
+          'Name' : 'Algorithms',
+          'CSCIClass' : true,
+          'Grade' : 'A-',
+          'InProgress' : false,
+          'Completed' : true
+      },
+      {
+          'Name' : 'Introduction to CyberSecurity',
+          'CSCIClass' : true,
+          'Grade' : 'A',
+          'InProgress' : false,
+          'Completed' : true
+      },
+      {
+          'Name' : 'Computer Systems',
+          'CSCIClass' : true,
+          'Grade' : 'A',
+          'InProgress' : false,
+          'Completed' : true
+      },
+      {
+          'Name' : 'Software Dev Methods and Tools',
+          'CSCIClass' : true,
+          'Grade' : 'A',
+          'InProgress' : false,
+          'Completed' : true
+      },
+      {
+          'Name' : 'Linear Algebra with CS Applications',
+          'CSCIClass' : true,
+          'Grade' : 'A-',
+          'InProgress' : false,
+          'Completed' : true
+      },
+      {
+          'Name' : 'Data Structures',
+          'CSCIClass' : true,
+          'Grade' : 'A',
+          'InProgress' : false,
+          'Completed' : true
+      },
+      {
+          'Name' : 'Discrete Structures',
+          'CSCIClass' : true,
+          'Grade' : 'A-',
+          'InProgress' : false,
+          'Completed' : true
+      },
+      {
+          'Name' : 'Introduction to Computing',
+          'CSCIClass' : true,
+          'Grade' : 'A',
+          'InProgress' : false,
+          'Completed' : true
+      }
   ];
 
   constructor() { }

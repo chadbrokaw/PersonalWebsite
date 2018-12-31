@@ -17,6 +17,11 @@
       <div class="describeText">
         {{experience.description}}
       </div>
+      <div *ngIf="experience.availableExtras">
+        <mat-chip-list>
+          <mat-chip class="chipStyle" *ngFor="let extra of experience.extra" [routerLink]="[extra.link]">{{extra.title}}</mat-chip>
+        </mat-chip-list>
+      </div>
     </div>
   </div>
 </div>

@@ -55,7 +55,7 @@ export class AboutMePageComponent implements OnInit {
 
     /*With the exception of the animation series for the text (and the photo of me), this component is pretty simple.*/
 
-    compName: string = "AboutMe";
+    compName: string = 'AboutMe';
     photoNames = [
       './assets/Photos/Cooper.jpg',
       './assets/Photos/Headshot.JPG',

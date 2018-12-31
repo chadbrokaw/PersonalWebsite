@@ -1,129 +1,255 @@
-<div class="mainImageSplash">
-  <div [@fadeUp]="'in'" class="viewEventsSplash">
-    <img class="images" src="../../assets/portfolioAssets/EventListSplash.png">
-  </div>
-  <div [@fadeDown]="'in'" class="beInvolvedSplash">
-    <img class="images" src="../../assets/portfolioAssets/BeInvolvedSplash.png">
-  </div>
-  <div [@fadeUp]="'in'" class="messagesSplash">
-    <img class="images" src="../../assets/portfolioAssets/messagesSplash.png">
-  </div>
-</div>
-<div class="contentHeader">
-  <h1>bringing people together</h1>
-</div>
-<div class="projectSummary">
-  <h3>Project<br> Summary</h3>
-  <p> When I was a first-year in college, I felt lost, as did so many others that I knew and talked to. Many people felt like they had no discernable direction or any sense of belonging. This sense of rootlessness leads many individuals to dropout of college, or dislike the time they spent there. Many students just get the vapid solution of “Just get involved”. However, on campus there are no easily identifiable resources to help individuals do just that. Be Involved was born out of a need to address this lack of resources on the campus and the surrounding community.</p>
-  <p> Currently, there are no services that are able to aggregate all available events into one centralized location. The university makes a genuine attempt through their BuffConnect portal as well as their PR departement. However, all of these services are ultimately constrained by university politics and bureaucracy. For example, the university is not allowed to mention any events related to the fraternities on The Hill. Nonetheless, these groups and communities are still active members of our campus and community.</p>
-  <p>The driving question of this project is <span style="font-style: italic">How might we curate more meaningful interaction between individuals?</span> I believe that BeInvolved is a part of the solution to that question. If we were able to have all events and groups, regardless of status relative to the university, then we could have a centralized, one-stop-shop for all individuals. Further, we can begin to curate the events based on the person and what they want. For example, we could begin to aggregate all events for LGBTQIA+ individuals, so that they could get a better sense of their community.</p>
-</div>
-
-<div class="researchFindings">
-  <h3>Research<br> Findings</h3>
-  <p>The research for BeInvolved was done at the beginning and middle of the project. Specifically, I had interviews with multiple individuals representing multiple different personality categories. The goal of these interviews was to better understand what students do to find community and friends on campus. Also, I would like to get a better idea of what students feel like they are missing on campus when it comes to community-building tools. Finally, I would like to understand how non-first-year students feel towards their personal friend group/community, and what they did to build that community. I don’t think this topic is isolated to just first-year students. <br> The questions that I asked were:</p>
-
-  <ol>
-    <li>How did you meet a friend you have on campus?</li>
-    <li>What events did you attend the most in you first year of college? What events do you attend the most now (if not a first-year)?</li>
-    <li>How do you find out about events happening in and around the campus?</li>
-    <li>Does anything prevent you from attending these events?</li>
-    <li>Could you describe your transition into college life?</li>
-    <li>Did you ever consider dropping out of college? Why?</li>
-  </ol>
-  <p>Using those questions, I came to the following conclusions: </p>
-  <ul>
-    <li>⅞ people did not feel that they had a community on campus</li>
-    <li>⅜ said they considered dropping out of college entirely</li>
-    <li>⅝ said their first year only got better after they felt like they had friends</li>
-    <li>⅝ said they found friends through a campus event like class, recitation, or dorm event</li>
-    <li>½ emphasized friendship building was a major consideration during their first year</li>
-    <li>⅝ found friends not through any events hosted by CU Boulder</li>
-    <li>3 heard about events through word of mouth, 2 through chalking, 1 through facebook, 1 through CU Boulder Today, 1 through posters</li>
-  </ul>
-
-  <p>Clearly, there is room for improvement in getting students involved and feeling like they have a sense of community on campus. In addition, the wide disparity of locations that people hear about events and news shows that there is a need for a centralized outlet of information.</p>
-</div>
-
-<div class="competitiveAnalysis">
-  <h3>Competitive<br> Analysis</h3>
-  <div class="ListOfCompetitors">
-    <div class="competitor">
-      <h5>Facebook</h5>
-      <h6 style="color: rgb(34,139,34)">Good</h6>
-      <p>Lots of diverse interests</p>
-      <p>Good UI</p>
-      <p>See what friends are doing</p>
-      <p>Planning parties</p>
-
-      <h6 style="color: rgb(184,15,10)">Bad</h6>
-      <p>Events not main focus</p>
-      <p>Events focused on proximity</p>
+<div *ngIf="!smallScreen" class="largeScreen">
+  <div class="mainImageSplash">
+    <div [@fadeUp]="'in'" class="viewEventsSplash">
+      <img class="images" src="../../assets/portfolioAssets/EventListSplash.png">
     </div>
-    <div class="competitor">
-      <h5>BuffConnect</h5>
-      <h6 style="color: rgb(34,139,34)">Good</h6>
-      <p>Simple UI</p>
-      <p>Easy to contact members</p>
-
-      <h6 style="color: rgb(184,15,10)">Bad</h6>
-      <p>Exclusive to CU Boulder</p>
-      <p>Only registered student orgs</p>
-      <p>Unintuitive calendar</p>
-      <p>Not many users</p>
+    <div [@fadeDownBig]="'in'" class="beInvolvedSplash">
+      <img class="images" src="../../assets/portfolioAssets/BeInvolvedSplash.png">
     </div>
-    <div class="competitor">
-      <h5>MeetUp</h5>
-      <h6 style="color: rgb(34,139,34)">Good</h6>
-      <p>Easy to select your interests</p>
-      <p>Playful UI</p>
-      <p>Easy to create a group</p>
-      <p>More users</p>
-
-      <h6 style="color: rgb(184,15,10)">Bad</h6>
-      <p>Not focused towards college</p>
-      <p>Difficult tp change interests</p>
+    <div [@fadeUp]="'in'" class="messagesSplash">
+      <img class="images" src="../../assets/portfolioAssets/messagesSplash.png">
     </div>
   </div>
-</div>
+  <div class="contentHeader">
+    <h1>bringing people together</h1>
+  </div>
+  <div class="projectSummary">
+    <h3>Project<br> Summary</h3>
+    <p> When I was a first-year in college, I felt lost, as did so many others that I knew and talked to. Many people felt like they had no discernable direction or any sense of belonging. This sense of rootlessness leads many individuals to dropout of college, or dislike the time they spent there. Many students just get the vapid solution of “Just get involved”. However, on campus there are no easily identifiable resources to help individuals do just that. Be Involved was born out of a need to address this lack of resources on the campus and the surrounding community.</p>
+    <p> Currently, there are no services that are able to aggregate all available events into one centralized location. The university makes a genuine attempt through their BuffConnect portal as well as their PR departement. However, all of these services are ultimately constrained by university politics and bureaucracy. For example, the university is not allowed to mention any events related to the fraternities on The Hill. Nonetheless, these groups and communities are still active members of our campus and community.</p>
+    <p>The driving question of this project is <span style="font-style: italic">How might we curate more meaningful interaction between individuals?</span> I believe that BeInvolved is a part of the solution to that question. If we were able to have all events and groups, regardless of status relative to the university, then we could have a centralized, one-stop-shop for all individuals. Further, we can begin to curate the events based on the person and what they want. For example, we could begin to aggregate all events for LGBTQIA+ individuals, so that they could get a better sense of their community.</p>
+  </div>
 
-<div class="primaryUserFlow">
-  <h3>User<br> Flow</h3>
-  <div class="imageContainer">
-    <img src="../../assets/portfolioAssets/UserFlow.png" class="userFLowPic">
+  <div class="researchFindings">
+    <h3>Research<br> Findings</h3>
+    <p>The research for BeInvolved was done at the beginning and middle of the project. Specifically, I had interviews with multiple individuals representing multiple different personality categories. The goal of these interviews was to better understand what students do to find community and friends on campus. Also, I would like to get a better idea of what students feel like they are missing on campus when it comes to community-building tools. Finally, I would like to understand how non-first-year students feel towards their personal friend group/community, and what they did to build that community. I don’t think this topic is isolated to just first-year students. <br> The questions that I asked were:</p>
+
+    <ol>
+      <li>How did you meet a friend you have on campus?</li>
+      <li>What events did you attend the most in you first year of college? What events do you attend the most now (if not a first-year)?</li>
+      <li>How do you find out about events happening in and around the campus?</li>
+      <li>Does anything prevent you from attending these events?</li>
+      <li>Could you describe your transition into college life?</li>
+      <li>Did you ever consider dropping out of college? Why?</li>
+    </ol>
+    <p>Using those questions, I came to the following conclusions: </p>
+    <ul>
+      <li>⅞ people did not feel that they had a community on campus</li>
+      <li>⅜ said they considered dropping out of college entirely</li>
+      <li>⅝ said their first year only got better after they felt like they had friends</li>
+      <li>⅝ said they found friends through a campus event like class, recitation, or dorm event</li>
+      <li>½ emphasized friendship building was a major consideration during their first year</li>
+      <li>⅝ found friends not through any events hosted by CU Boulder</li>
+      <li>3 heard about events through word of mouth, 2 through chalking, 1 through facebook, 1 through CU Boulder Today, 1 through posters</li>
+    </ul>
+
+    <p>Clearly, there is room for improvement in getting students involved and feeling like they have a sense of community on campus. In addition, the wide disparity of locations that people hear about events and news shows that there is a need for a centralized outlet of information.</p>
+  </div>
+
+  <div class="competitiveAnalysis">
+    <h3>Competitive<br> Analysis</h3>
+    <div class="ListOfCompetitors">
+      <div class="competitor">
+        <h5>Facebook</h5>
+        <h6 style="color: rgb(34,139,34)">Good</h6>
+        <p>Lots of diverse interests</p>
+        <p>Good UI</p>
+        <p>See what friends are doing</p>
+        <p>Planning parties</p>
+
+        <h6 style="color: rgb(184,15,10)">Bad</h6>
+        <p>Events not main focus</p>
+        <p>Events focused on proximity</p>
+      </div>
+      <div class="competitor">
+        <h5>BuffConnect</h5>
+        <h6 style="color: rgb(34,139,34)">Good</h6>
+        <p>Simple UI</p>
+        <p>Easy to contact members</p>
+
+        <h6 style="color: rgb(184,15,10)">Bad</h6>
+        <p>Exclusive to CU Boulder</p>
+        <p>Only registered student orgs</p>
+        <p>Unintuitive calendar</p>
+        <p>Not many users</p>
+      </div>
+      <div class="competitor">
+        <h5>MeetUp</h5>
+        <h6 style="color: rgb(34,139,34)">Good</h6>
+        <p>Easy to select your interests</p>
+        <p>Playful UI</p>
+        <p>Easy to create a group</p>
+        <p>More users</p>
+
+        <h6 style="color: rgb(184,15,10)">Bad</h6>
+        <p>Not focused towards college</p>
+        <p>Difficult tp change interests</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="primaryUserFlow">
+    <h3>User<br> Flow</h3>
+    <div class="imageContainer">
+      <img src="../../assets/portfolioAssets/UserFlow.png" class="userFLowPic">
+    </div>
+  </div>
+
+  <div class="usabilityTest">
+    <h3>Usability <br> Testing</h3>
+    <p>During my usability testing with the low fidelity prototype,  I received great feedback. Here are the highlights of the feedback I received:</p>
+    <ul>
+      <li>Have a more intuitive layout. The user was confused as to where to find the profile, or how to add an event to a calendar</li>
+      <li>Give better feedback to the user when they select an interest (e.g. make the circle bigger)</li>
+      <li> Make it clearer which interest “bubbles” were more popular</li>
+      <li>Include a skip option on the interest selection process and default to the popular options</li>
+      <li>Include social media links to friends</li>
+      <li>Include the location of the events</li>
+      <li>Include a description of the events</li>
+      <li>Have a full calendar view to view all of the events</li>
+      <li>Provide more clarity on how a user can create an event.. Do they need to create an organization to create an event? Can users create events individually.</li>
+      <li>Users liked the ability to integrate right to their calendar</li>
+    </ul>
+    <p>Once I received this feedback, I altered the prototype accordingly. Primarily, I created a more intuitive layout that had clearer icons and a easier flow from one thing to the next. Second, I made the interest bubbles at the beginning be larger if they were more popular, and expand when selected. I did not include a skip option in the interest selection process, however, the user may select “done” whenever they wish. If they choose to not select any interests, then the event view will populate with the most popular events. When the user selects an event, they can now see both the location and description of the event.</p>
+  </div>
+
+  <div class="finalMockup">
+    <h3>Final <br> Mockup</h3>
+    <img src="../../assets/portfolioAssets/FullStoryboard.png" class="finalMockupImage">
+  </div>
+
+  <div class="InteractivePrototype">
+    <h3>Interactive <br> Prototype</h3>
+  </div>
+
+  <div class="prototypeContainer">
+    <iframe class="prototype" width="438" height="930" src="//invis.io/KNPHPQ2SVA8" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
-<div class="usabilityTest">
-  <h3>Usability <br> Testing</h3>
-  <p>During my usability testing with the low fidelity prototype,  I received great feedback. Here are the highlights of the feedback I received:</p>
-  <ul>
-    <li>Have a more intuitive layout. The user was confused as to where to find the profile, or how to add an event to a calendar</li>
-    <li>Give better feedback to the user when they select an interest (e.g. make the circle bigger)</li>
-    <li> Make it clearer which interest “bubbles” were more popular</li>
-    <li>Include a skip option on the interest selection process and default to the popular options</li>
-    <li>Include social media links to friends</li>
-    <li>Include the location of the events</li>
-    <li>Include a description of the events</li>
-    <li>Have a full calendar view to view all of the events</li>
-    <li>Provide more clarity on how a user can create an event.. Do they need to create an organization to create an event? Can users create events individually.</li>
-    <li>Users liked the ability to integrate right to their calendar</li>
-  </ul>
-  <p>Once I received this feedback, I altered the prototype accordingly. Primarily, I created a more intuitive layout that had clearer icons and a easier flow from one thing to the next. Second, I made the interest bubbles at the beginning be larger if they were more popular, and expand when selected. I did not include a skip option in the interest selection process, however, the user may select “done” whenever they wish. If they choose to not select any interests, then the event view will populate with the most popular events. When the user selects an event, they can now see both the location and description of the event.</p>
-</div>
 
-<div class="finalMockup">
-  <h3>Final <br> Mockup</h3>
-  <img src="../../assets/portfolioAssets/FullStoryboard.png" class="finalMockupImage">
-</div>
 
-<div class="InteractivePrototype">
-  <h3>Interactive <br> Prototype</h3>
-</div>
+<div *ngIf="smallScreen" class="smallScreen">
+  <div class="mainImageSplash">
+    <div [@fadeDownSmall]="'in'" class="beInvolvedSplash">
+      <img class="images" src="../../assets/portfolioAssets/BeInvolvedSplash.png">
+    </div>
+  </div>
+  <div class="contentHeader">
+    <h1>bringing people together</h1>
+  </div>
+  <div class="projectSummary">
+    <h3>Project<br> Summary</h3>
+    <p> When I was a first-year in college, I felt lost, as did so many others that I knew and talked to. Many people felt like they had no discernable direction or any sense of belonging. This sense of rootlessness leads many individuals to dropout of college, or dislike the time they spent there. Many students just get the vapid solution of “Just get involved”. However, on campus there are no easily identifiable resources to help individuals do just that. Be Involved was born out of a need to address this lack of resources on the campus and the surrounding community.</p>
+    <p> Currently, there are no services that are able to aggregate all available events into one centralized location. The university makes a genuine attempt through their BuffConnect portal as well as their PR departement. However, all of these services are ultimately constrained by university politics and bureaucracy. For example, the university is not allowed to mention any events related to the fraternities on The Hill. Nonetheless, these groups and communities are still active members of our campus and community.</p>
+    <p>The driving question of this project is <span style="font-style: italic">How might we curate more meaningful interaction between individuals?</span> I believe that BeInvolved is a part of the solution to that question. If we were able to have all events and groups, regardless of status relative to the university, then we could have a centralized, one-stop-shop for all individuals. Further, we can begin to curate the events based on the person and what they want. For example, we could begin to aggregate all events for LGBTQIA+ individuals, so that they could get a better sense of their community.</p>
+  </div>
 
-<div class="prototypeContainer">
-  <iframe class="prototype" width="438" height="930" src="//invis.io/KNPHPQ2SVA8" frameborder="0" allowfullscreen></iframe>
-</div>
+  <div class="researchFindings">
+    <h3>Research<br> Findings</h3>
+    <p>The research for BeInvolved was done at the beginning and middle of the project. Specifically, I had interviews with multiple individuals representing multiple different personality categories. The goal of these interviews was to better understand what students do to find community and friends on campus. Also, I would like to get a better idea of what students feel like they are missing on campus when it comes to community-building tools. Finally, I would like to understand how non-first-year students feel towards their personal friend group/community, and what they did to build that community. I don’t think this topic is isolated to just first-year students. <br> The questions that I asked were:</p>
 
+    <ol>
+      <li>How did you meet a friend you have on campus?</li>
+      <li>What events did you attend the most in you first year of college? What events do you attend the most now (if not a first-year)?</li>
+      <li>How do you find out about events happening in and around the campus?</li>
+      <li>Does anything prevent you from attending these events?</li>
+      <li>Could you describe your transition into college life?</li>
+      <li>Did you ever consider dropping out of college? Why?</li>
+    </ol>
+    <p>Using those questions, I came to the following conclusions: </p>
+    <ul>
+      <li>⅞ people did not feel that they had a community on campus</li>
+      <li>⅜ said they considered dropping out of college entirely</li>
+      <li>⅝ said their first year only got better after they felt like they had friends</li>
+      <li>⅝ said they found friends through a campus event like class, recitation, or dorm event</li>
+      <li>½ emphasized friendship building was a major consideration during their first year</li>
+      <li>⅝ found friends not through any events hosted by CU Boulder</li>
+      <li>3 heard about events through word of mouth, 2 through chalking, 1 through facebook, 1 through CU Boulder Today, 1 through posters</li>
+    </ul>
+
+    <p>Clearly, there is room for improvement in getting students involved and feeling like they have a sense of community on campus. In addition, the wide disparity of locations that people hear about events and news shows that there is a need for a centralized outlet of information.</p>
+  </div>
+
+  <div class="competitiveAnalysis">
+    <h3>Competitive<br> Analysis</h3>
+    <div class="ListOfCompetitors">
+      <div class="competitor">
+        <h5>Facebook</h5>
+        <h6 style="color: rgb(34,139,34)">Good</h6>
+        <p>Lots of diverse interests</p>
+        <p>Good UI</p>
+        <p>See what friends are doing</p>
+        <p>Planning parties</p>
+
+        <h6 style="color: rgb(184,15,10)">Bad</h6>
+        <p>Events not main focus</p>
+        <p>Events focused on proximity</p>
+      </div>
+      <div class="competitor">
+        <h5>BuffConnect</h5>
+        <h6 style="color: rgb(34,139,34)">Good</h6>
+        <p>Simple UI</p>
+        <p>Easy to contact members</p>
+
+        <h6 style="color: rgb(184,15,10)">Bad</h6>
+        <p>Exclusive to CU Boulder</p>
+        <p>Only registered student orgs</p>
+        <p>Unintuitive calendar</p>
+        <p>Not many users</p>
+      </div>
+      <div class="competitor">
+        <h5>MeetUp</h5>
+        <h6 style="color: rgb(34,139,34)">Good</h6>
+        <p>Easy to select your interests</p>
+        <p>Playful UI</p>
+        <p>Easy to create a group</p>
+        <p>More users</p>
+
+        <h6 style="color: rgb(184,15,10)">Bad</h6>
+        <p>Not focused towards college</p>
+        <p>Difficult tp change interests</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="primaryUserFlow">
+    <h3>User<br> Flow</h3>
+    <div class="imageContainer">
+      <img src="../../assets/portfolioAssets/UserFlow.png" class="userFLowPic">
+    </div>
+  </div>
+
+  <div class="usabilityTest">
+    <h3>Usability <br> Testing</h3>
+    <p>During my usability testing with the low fidelity prototype,  I received great feedback. Here are the highlights of the feedback I received:</p>
+    <ul>
+      <li>Have a more intuitive layout. The user was confused as to where to find the profile, or how to add an event to a calendar</li>
+      <li>Give better feedback to the user when they select an interest (e.g. make the circle bigger)</li>
+      <li> Make it clearer which interest “bubbles” were more popular</li>
+      <li>Include a skip option on the interest selection process and default to the popular options</li>
+      <li>Include social media links to friends</li>
+      <li>Include the location of the events</li>
+      <li>Include a description of the events</li>
+      <li>Have a full calendar view to view all of the events</li>
+      <li>Provide more clarity on how a user can create an event.. Do they need to create an organization to create an event? Can users create events individually.</li>
+      <li>Users liked the ability to integrate right to their calendar</li>
+    </ul>
+    <p>Once I received this feedback, I altered the prototype accordingly. Primarily, I created a more intuitive layout that had clearer icons and a easier flow from one thing to the next. Second, I made the interest bubbles at the beginning be larger if they were more popular, and expand when selected. I did not include a skip option in the interest selection process, however, the user may select “done” whenever they wish. If they choose to not select any interests, then the event view will populate with the most popular events. When the user selects an event, they can now see both the location and description of the event.</p>
+  </div>
+
+  <div class="finalMockup">
+    <h3>Final <br> Mockup</h3>
+    <img src="../../assets/portfolioAssets/FullStoryboard.png" class="finalMockupImage">
+  </div>
+
+  <div class="InteractivePrototype">
+    <h3>Interactive <br> Prototype</h3>
+  </div>
+
+  <div class="prototypeContainer">
+    <h6>Please open this webpage on a larger screen to use the Invision prototype.</h6>
+  </div>
+</div>
 
 

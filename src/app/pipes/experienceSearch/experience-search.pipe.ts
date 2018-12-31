@@ -13,14 +13,12 @@ export class ExperienceSearchPipe implements PipeTransform {
              club: boolean,
              project: boolean,
              everything: boolean): any {
-    debugger;
     if ( everything ) {
       return items;
     }
 
     if ( items && items.length ) {
         return items.filter((item) => {
-          debugger;
           if (
             ( highlights && item.highlight === highlights ) ||
             ( work && item.work === work ) ||
@@ -28,12 +26,10 @@ export class ExperienceSearchPipe implements PipeTransform {
             ( award && item.award === award ) ||
             ( project && item.project === project )
           ) {
-              return true
+              return true;
           }
-          else {
-            return false;
-          }
-        })
+          else { return false; }
+        });
     }
     else {
       return items;

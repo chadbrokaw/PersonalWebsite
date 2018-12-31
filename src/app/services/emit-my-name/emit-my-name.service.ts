@@ -22,9 +22,11 @@ export class EmitMyNameService {
       this.currentComponent = componentName;
     }
 
-    /*
+
+
+    /**
      * Name: getComponentName
-     * Purpose: This functions sole purpose is to return the name of the component currently being displayed on the screen (i.e. Home component)
+     * Type: public
      * @PARAM: none
      * @RETURN: [string] The current component name, as a string
      */

@@ -17,7 +17,7 @@ import { Experience }        from "../models/experience.model";
 })
 export class ExperiencePageComponent implements OnInit {
 
-           compName: string = "Experience";
+  compName: string = "Experience";
   experiences: Experience[] = undefined;
   flag: boolean = false;
   highlightButton: boolean = true;
@@ -42,7 +42,7 @@ export class ExperiencePageComponent implements OnInit {
   ngOnInit() {
     this.emitMyName.emitComponentName( this.compName );
     this.getExperiencesFromService();
-    this.titleService.setTitle('Chad Brokaw | Experience')
+    this.titleService.setTitle('Chad Brokaw | Experience');
   }
 
   /*
@@ -124,7 +124,6 @@ export class ExperiencePageComponent implements OnInit {
         }
         break;
     }
-    console.log(this.highlightButton);
   }
 
 }
